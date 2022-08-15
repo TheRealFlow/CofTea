@@ -1,4 +1,4 @@
-import {PRODUCTS} from '../../../backend/db';
+import {products} from '../../../backend/db';
 import StyledProductCard from '../ProductCard';
 
 import StyledProductList from './styled';
@@ -6,7 +6,7 @@ import StyledProductList from './styled';
 export default function ProductList() {
 	return (
 		<StyledProductList>
-			{PRODUCTS.map(product => {
+			{products.map(product => {
 				return (
 					<StyledProductCard key={product.id}>
 						<p>{product.name}</p>
