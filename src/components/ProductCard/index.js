@@ -5,6 +5,7 @@ const StyledProductCard = styled.section`
 	padding: 10px;
 	border: 1px solid black;
 	border-radius: 10px;
+	background-color: gray;
 	p {
 		color: white;
 		font-size: 20px;
