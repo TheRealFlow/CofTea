@@ -6,18 +6,23 @@ import StyledProductList from './styled';
 
 function ProductListCart() {
 	const cartProducts = useStore(state => state.cartProducts);
+	const deleteFromCart = useStore(state => state.deleteFromCart);
 
 	return (
 		<>
-			<h2>ShoppingCart</h2>
 			<StyledProductList>
-				<p></p>
 				{cartProducts.map(cartProduct => {
 					return (
 						<StyledProductCard key={cartProduct.id}>
 							<p>{cartProduct.name}</p>
 							<p>{cartProduct.price}</p>
-							<StyledButton> Delete </StyledButton>
+							<StyledButton
+								onClick={() => {
+									deleteFromCart(cartProduct.id);
+								}}
+							>
+								Delete
+							</StyledButton>
 						</StyledProductCard>
 					);
 				})}
