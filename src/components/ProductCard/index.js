@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledProductCard = styled.section`
+const StyledProductCard = styled.li`
 	margin: 10px;
 	padding: 10px;
 	border: 1px solid black;
