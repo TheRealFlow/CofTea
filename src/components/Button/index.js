@@ -1,5 +1,10 @@
-import StyledButton from './styled';
+import styled from 'styled-components';
 
-export default function Button() {
-	return <StyledButton>Add to Cart</StyledButton>;
-}
+const StyledButton = styled.button`
+	margin: 1rem;
+	padding: 0.25rem 0.5rem 0.5rem;
+	border-radius: 1rem;
+	font-size: 1.25rem;
+`;
+
+export default StyledButton;
