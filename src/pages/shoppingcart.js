@@ -9,7 +9,7 @@ export default function ShoppingCartPage() {
 		<>
 			<Header />
 
-			<Link href="/">
+			<Link href="/" aria-label="Back Arrow">
 				<a>
 					<SVG size="40px" color="black" variant="backArrow" />
 				</a>
