@@ -9,6 +9,14 @@ const useStore = create(set => ({
 			};
 		});
 	},
+
+	deleteFromCart: id => {
+		set(state => {
+			return {
+				cartProducts: state.cartProducts.filter(cartProduct => cartProduct.id !== id),
+			};
+		});
+	},
 }));
 
 export default useStore;
