@@ -16,6 +16,7 @@ export default function ProductList() {
 						<p>{product.name}</p>
 						<p>{product.price}</p>
 						<StyledButton
+							variant="default"
 							onClick={() => {
 								addToCart(product);
 							}}

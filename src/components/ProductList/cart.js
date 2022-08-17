@@ -17,6 +17,7 @@ function ProductListCart() {
 							<p>{cartProduct.name}</p>
 							<p>{cartProduct.price}</p>
 							<StyledButton
+								variant="delete"
 								onClick={() => {
 									deleteFromCart(cartProduct.id);
 								}}
