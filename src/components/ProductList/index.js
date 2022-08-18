@@ -22,8 +22,8 @@ export default function ProductList() {
 							height={100}
 							layout="fixed"
 						/>
-						<p>{product.name}</p>
-						<p>{product.price}</p>
+						<h1>{product.name}</h1>
+						<h2>{product.price}</h2>
 						<StyledButton
 							variant="default"
 							onClick={() => {

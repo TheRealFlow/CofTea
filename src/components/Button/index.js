@@ -1,10 +1,12 @@
 import styled, {css} from 'styled-components';
 
 const StyledButton = styled.button`
-	margin: 1rem;
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
 	padding: 0.25rem 0.5rem;
-	border-radius: 1rem;
-	font-size: 1.25rem;
+	border-radius: 10px;
+	background-color: burlywood;
 	${({variant}) =>
 		variant === 'default' &&
 		css`
