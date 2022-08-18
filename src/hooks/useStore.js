@@ -1,15 +1,21 @@
 import create from 'zustand';
 
 const useStore = create(set => ({
-	counter: 0,
-	setCounter(counter) {
-		set({counter});
+	cartProducts: [],
+	addToCart: name => {
+		set(state => {
+			return {
+				cartProducts: [...state.cartProducts, name],
+			};
+		});
 	},
-	decrementCounter(step = 1) {
-		set(({counter}) => ({counter: counter - step}));
-	},
-	incrementCounter(step = 1) {
-		set(({counter}) => ({counter: counter + step}));
+
+	deleteFromCart: id => {
+		set(state => {
+			return {
+				cartProducts: state.cartProducts.filter(cartProduct => cartProduct.id !== id),
+			};
+		});
 	},
 }));
 

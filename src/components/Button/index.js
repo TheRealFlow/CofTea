@@ -1,18 +1,36 @@
-import StyledButton from './styled';
+import styled, {css} from 'styled-components';
 
-/**
- *
- * @param {React.ReactNode} children
- * @param {React.HTMLAttributes<HTMLButtonElement>} props
- * @return {JSX.Element}
- * @constructor
- */
-export default function Button({children, type = 'button', ...props}) {
-	return (
-		<StyledButton type={type} {...props}>
-			{children}
-		</StyledButton>
-	);
-}
+const StyledButton = styled.button`
+	margin: 1rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 1rem;
+	font-size: 1.25rem;
+	${({variant}) =>
+		variant === 'default' &&
+		css`
+			border: 1px solid black;
+			color: black;
+			background-color: none;
 
-Button.propTypes = {};
+			&:active {
+				color: white;
+				background-color: green;
+			}
+		`}
+
+	${({variant}) =>
+		variant === 'added' &&
+		css`
+			color: white;
+			background-color: green;
+		`}
+
+    ${({variant}) =>
+		variant === 'delete' &&
+		css`
+			color: white;
+			background-color: red;
+		`}
+`;
+
+export default StyledButton;
