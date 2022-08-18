@@ -5,7 +5,6 @@ const StyledButton = styled.button`
 	padding: 0.25rem 0.5rem;
 	border-radius: 1rem;
 	font-size: 1.25rem;
-
 	${({variant}) =>
 		variant === 'default' &&
 		css`
