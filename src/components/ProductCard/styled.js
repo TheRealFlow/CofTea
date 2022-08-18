@@ -8,7 +8,7 @@ const StyledProductCard = styled.li`
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color: lightslategray;
-	h1 {
+	h2 {
 		position: absolute;
 		top: 0.25rem;
 		right: 1rem;
@@ -16,7 +16,7 @@ const StyledProductCard = styled.li`
 		color: whitesmoke;
 		font-size: 1.1rem;
 	}
-	h2 {
+	h3 {
 		position: absolute;
 		top: 2.25rem;
 		right: 1rem;

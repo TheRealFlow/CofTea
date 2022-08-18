@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 import {products} from '../../../backend/db';
 import useStore from '../../hooks/useStore';
-import StyledButton from '../Button';
-import StyledProductCard from '../ProductCard';
+import StyledButton from '../Button/styled';
+import StyledProductCard from '../ProductCard/styled';
 
 import StyledProductList from './styled';
 
@@ -22,8 +22,8 @@ export default function ProductList() {
 							height={100}
 							layout="fixed"
 						/>
-						<h1>{product.name}</h1>
-						<h2>{product.price}</h2>
+						<h2>{product.name}</h2>
+						<h3>{product.price}</h3>
 						<StyledButton
 							variant="default"
 							onClick={() => {

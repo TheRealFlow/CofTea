@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 import useStore from '../../hooks/useStore';
-import StyledButton from '../Button';
-import StyledProductCard from '../ProductCard';
+import StyledButton from '../Button/styled';
+import StyledProductCard from '../ProductCard/styled';
 
 import StyledProductList from './styled';
 
@@ -15,8 +15,8 @@ function ProductListCart() {
 			{cartProducts.map(cartProduct => {
 				return (
 					<StyledProductCard key={cartProduct.id}>
-						<h1>{cartProduct.name}</h1>
-						<h2>{cartProduct.price}</h2>
+						<h2>{cartProduct.name}</h2>
+						<h3>{cartProduct.price}</h3>
 						<Image
 							alt={'Photo from the product'}
 							src={cartProduct.imgUrl}
