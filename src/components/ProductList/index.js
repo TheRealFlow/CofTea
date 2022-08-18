@@ -4,6 +4,8 @@ import {products} from '../../../backend/db';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
 import StyledProductCard from '../ProductCard/styled';
+import StyledName from '../ProductName/styled';
+import StyledPrice from '../ProductPrice/styled';
 
 import StyledProductList from './styled';
 
@@ -22,8 +24,8 @@ export default function ProductList() {
 							height={100}
 							layout="fixed"
 						/>
-						<h2>{product.name}</h2>
-						<h3>{product.price}</h3>
+						<StyledName>{product.name}</StyledName>
+						<StyledPrice>{product.price}</StyledPrice>
 						<StyledButton
 							variant="default"
 							onClick={() => {

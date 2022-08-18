@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledPrice = styled.h2`
+const StyledPrice = styled.h3`
 	color: whitesmoke;
 	font-size: 1rem;
 `;

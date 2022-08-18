@@ -6,7 +6,7 @@ import StyledProductCard from '../ProductCard/styled';
 
 import StyledProductList from './styled';
 
-function ProductListCart() {
+function ShoppingCart() {
 	const cartProducts = useStore(state => state.cartProducts);
 	const deleteFromCart = useStore(state => state.deleteFromCart);
 
@@ -15,8 +15,6 @@ function ProductListCart() {
 			{cartProducts.map(cartProduct => {
 				return (
 					<StyledProductCard key={cartProduct.id}>
-						<h2>{cartProduct.name}</h2>
-						<h3>{cartProduct.price}</h3>
 						<Image
 							alt={'Photo from the product'}
 							src={cartProduct.imgUrl}
@@ -24,6 +22,8 @@ function ProductListCart() {
 							height={100}
 							layout="fixed"
 						/>
+						<h2>{cartProduct.name}</h2>
+						<h3>{cartProduct.price}</h3>
 						<StyledButton
 							variant="delete"
 							onClick={() => {
@@ -39,4 +39,4 @@ function ProductListCart() {
 	);
 }
 
-export default ProductListCart;
+export default ShoppingCart;

@@ -10,6 +10,9 @@ const StyledProductCard = styled.li`
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color: lightslategray;
+	img {
+		border-radius: 10px;
+	}
 `;
 
 export default StyledProductCard;
