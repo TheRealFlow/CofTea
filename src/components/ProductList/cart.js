@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button';
 import StyledProductCard from '../ProductCard';
@@ -13,8 +15,15 @@ function ProductListCart() {
 			{cartProducts.map(cartProduct => {
 				return (
 					<StyledProductCard key={cartProduct.id}>
-						<p>{cartProduct.name}</p>
-						<p>{cartProduct.price}</p>
+						<h1>{cartProduct.name}</h1>
+						<h2>{cartProduct.price}</h2>
+						<Image
+							alt={'Photo from the product'}
+							src={cartProduct.imgUrl}
+							width={100}
+							height={100}
+							layout="fixed"
+						/>
 						<StyledButton
 							variant="delete"
 							onClick={() => {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledProductCard = styled.li`
 	position: relative;
-	width: 80%;
+	width: 90%;
 	margin: 0.5rem;
 	padding: 0.5rem;
 	border: 1px solid black;
