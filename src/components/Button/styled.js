@@ -36,6 +36,12 @@ const StyledButton = styled.button`
 				background-color: white;
 			}
 		`}
+		${({variant}) =>
+		variant === 'checkout' &&
+		css`
+			color: white;
+			background-color: greenyellow;
+		`}
 `;
 
 export default StyledButton;
