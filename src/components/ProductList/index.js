@@ -37,7 +37,6 @@ export default function ProductList() {
 					</StyledProductCard>
 				);
 			})}
-			;
 		</StyledProductList>
 	);
 }
