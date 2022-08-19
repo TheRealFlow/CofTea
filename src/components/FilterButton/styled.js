@@ -1,18 +1,20 @@
 import styled, {css} from 'styled-components';
 
 const StyledFilterButton = styled.button`
+	margin: 0;
+	padding: 0.25rem 1.5rem;
 	border-radius: 10px;
-	font-size: 0.5rem;
+	font-size: 0.65rem;
 	${({variant}) =>
 		variant === 'all' &&
 		css`
 			border: 1px solid black;
-			color: black;
-			background-color: none;
+			color: white;
+			background-color: grey;
 
 			&:active {
-				color: white;
-				background-color: green;
+				color: black;
+				background-color: lightgray;
 			}
 		`}
 
@@ -20,18 +22,22 @@ const StyledFilterButton = styled.button`
 		variant === 'coffee' &&
 		css`
 			color: white;
-			background-color: green;
+			background-color: brown;
+
+			&:active {
+				color: black;
+				background-color: lightgray;
 		`}
 
     ${({variant}) =>
 		variant === 'tea' &&
 		css`
 			color: white;
-			background-color: red;
+			background-color: olive;
 
 			&:active {
 				color: black;
-				background-color: white;
+				background-color: lightgray;
 			}
 		`}
 `;

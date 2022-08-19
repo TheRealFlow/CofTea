@@ -13,6 +13,7 @@ export default function HomePage() {
 			</Head>
 			<Header />
 			<FilterBar />
+
 			<ProductList />
 		</>
 	);
