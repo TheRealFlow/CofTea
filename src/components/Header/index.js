@@ -10,7 +10,7 @@ export default function Header() {
 			<h1>COFTEA</h1>
 			<Link href="./shoppingcart" aria-label="Shopping Cart">
 				<a>
-					<SVG size="40px" color="lightgreen" variant="cart" />
+					<SVG size="40px" color="burlywood" variant="cart" />
 				</a>
 			</Link>
 		</StyledHeader>

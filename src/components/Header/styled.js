@@ -4,8 +4,7 @@ const StyledHeader = styled.header`
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
-	margin: 0 0 4rem 0;
-	padding: 1rem;
+	padding: 0.5rem;
 `;
 
 export default StyledHeader;

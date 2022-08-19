@@ -3,10 +3,11 @@ import styled from 'styled-components';
 const StyledProductList = styled.ul`
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
+	align-items: center;
+	padding: 0;
 	border: 2px solid black;
 	border-radius: 10px;
-	background-color: blue;
+	background-color: darkgrey;
 	list-style: none;
 `;
 

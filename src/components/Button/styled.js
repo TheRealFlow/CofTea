@@ -1,10 +1,10 @@
 import styled, {css} from 'styled-components';
 
 const StyledButton = styled.button`
-	margin: 1rem;
+	margin: 0.5rem;
 	padding: 0.25rem 0.5rem;
-	border-radius: 1rem;
-	font-size: 1.25rem;
+	border-radius: 10px;
+	background-color: burlywood;
 	${({variant}) =>
 		variant === 'default' &&
 		css`
@@ -30,6 +30,11 @@ const StyledButton = styled.button`
 		css`
 			color: white;
 			background-color: red;
+
+			&:active {
+				color: black;
+				background-color: white;
+			}
 		`}
 `;
 
