@@ -39,6 +39,9 @@ const StyledButton = styled.button`
 		${({variant}) =>
 		variant === 'all' &&
 		css`
+			margin: 0;
+			padding: 0.25rem 1.5rem;
+			font-size: 0.65rem;
 			border: 1px solid black;
 			color: white;
 			background-color: grey;
@@ -52,6 +55,9 @@ const StyledButton = styled.button`
 	${({variant}) =>
 		variant === 'coffee' &&
 		css`
+			margin: 0;
+			padding: 0.25rem 1.5rem;
+			font-size: 0.65rem;
 			color: white;
 			background-color: brown;
 
@@ -63,6 +69,9 @@ const StyledButton = styled.button`
     ${({variant}) =>
 		variant === 'tea' &&
 		css`
+			margin: 0;
+			padding: 0.25rem 1.5rem;
+			font-size: 0.65rem;
 			color: white;
 			background-color: olive;
 

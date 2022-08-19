@@ -6,8 +6,6 @@ const StyledProductList = styled.ul`
 	align-items: center;
 	margin: 0;
 	padding: 0;
-	border: 2px solid black;
-	border-radius: 10px;
 	background-color: darkgrey;
 	list-style: none;
 `;

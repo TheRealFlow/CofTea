@@ -17,16 +17,6 @@ const useStore = create(set => ({
 			};
 		});
 	},
-
-	filterCoffee: category => {
-		set(state => {
-			return {
-				coffeeCards: state.coffeeCards.filter(
-					coffeeCard => coffeeCard.category !== category
-				),
-			};
-		});
-	},
 }));
 
 export default useStore;
