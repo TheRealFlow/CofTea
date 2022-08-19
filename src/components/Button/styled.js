@@ -40,7 +40,7 @@ const StyledButton = styled.button`
 		variant === 'checkout' &&
 		css`
 			color: white;
-			background-color: greenyellow;
+			background-color: lightgreen;
 		`}
 `;
 

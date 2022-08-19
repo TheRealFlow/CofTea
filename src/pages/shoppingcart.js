@@ -15,7 +15,7 @@ export default function ShoppingCartPage() {
 					<SVG size="40px" color="black" variant="backArrow" />
 				</a>
 			</Link>
-			<StyledButton>Checkout</StyledButton>
+			<StyledButton variant="checkout">Checkout</StyledButton>
 			<ShoppingCart />
 		</>
 	);
