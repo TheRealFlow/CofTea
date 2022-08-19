@@ -36,7 +36,15 @@ const StyledButton = styled.button`
 				background-color: white;
 			}
 		`}
-		${({variant}) =>
+
+	${({variant}) =>
+		variant === 'checkout' &&
+		css`
+			color: white;
+			background-color: lightgreen;
+		`}
+
+	${({variant}) =>
 		variant === 'all' &&
 		css`
 			margin: 0;
