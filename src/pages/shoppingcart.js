@@ -4,11 +4,13 @@ import SVG from '../../public/SVG/svg';
 import StyledButton from '../components/Button/styled';
 import Header from '../components/Header';
 import ShoppingCart from '../components/ProductList/cart';
+import useStore from '../hooks/useStore';
 
 export default function ShoppingCartPage() {
 	const checkoutMessage = () => {
 		alert('Your order has been successfully processed');
 	};
+	const clearCart = useStore(state => state.clearCart);
 	return (
 		<>
 			<Header />
@@ -24,6 +26,7 @@ export default function ShoppingCartPage() {
 					<StyledButton
 						onClick={() => {
 							checkoutMessage();
+							clearCart();
 						}}
 						variant="checkout"
 					>
