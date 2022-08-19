@@ -17,6 +17,14 @@ const useStore = create(set => ({
 			};
 		});
 	},
+
+	clearCart: () => {
+		set(() => {
+			return {
+				cartProducts: [],
+			};
+		});
+	},
 }));
 
 export default useStore;
