@@ -18,6 +18,7 @@ export default function ShoppingCartPage() {
 					<SVG size="40px" color="black" variant="backArrow" />
 				</a>
 			</Link>
+			<ShoppingCart />
 			<StyledButton
 				onClick={() => {
 					checkoutMessage();
@@ -26,7 +27,6 @@ export default function ShoppingCartPage() {
 			>
 				Checkout
 			</StyledButton>
-			<ShoppingCart />
 		</>
 	);
 }
