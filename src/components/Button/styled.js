@@ -29,6 +29,11 @@ const StyledButton = styled.button`
 		css`
 			color: white;
 			background-color: red;
+
+			&:active {
+				color: black;
+				background-color: white;
+			}
 		`}
 `;
 
