@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import SVG from '../../public/SVG/svg';
 import StyledButton from '../components/Button/styled';
-import CartItem from '../components/CartItem';
+import ShoppingCart from '../components/CartList';
 import Header from '../components/Header';
 import useStore from '../hooks/useStore';
 
@@ -20,7 +20,7 @@ export default function ShoppingCartPage() {
 					<SVG size="40px" color="black" variant="backArrow" />
 				</a>
 			</Link>
-			<CartItem />
+			<ShoppingCart />
 			<Link href="/" aria-label="Checkout Button">
 				<a>
 					<StyledButton

@@ -4,24 +4,21 @@ import CartItem from '../CartItem';
 import StyledCartList from './styled';
 
 function ShoppingCart() {
-	const products = useStore(state => state.products);
+	const cartProducts = useStore(state => state.cartProducts);
 
 	return (
 		<StyledCartList>
-			{products
-				.filter(product => {
-					return product.inCart;
-				})
-				.map(product => {
-					return (
-						<CartItem
-							key={product.id}
-							name={product.name}
-							price={product.price}
-							inCart={product.inCart}
-						/>
-					);
-				})}
+			{cartProducts.map(cartProduct => {
+				return (
+					<CartItem
+						key={cartProduct.id}
+						name={cartProduct.name}
+						price={cartProduct.price}
+						imgUrl={cartProduct.imgUrl}
+						inCart={cartProduct.inCart}
+					/>
+				);
+			})}
 		</StyledCartList>
 	);
 }

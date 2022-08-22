@@ -1,10 +1,9 @@
-import useStore from '../../hooks/useStore';
+import {products} from '../../../backend/db';
 import ProductCard from '../ProductCard';
 
 import StyledProductList from './styled';
 
 export default function ProductList() {
-	const products = useStore(state => state.products);
 	return (
 		<StyledProductList>
 			{products.map(product => {
