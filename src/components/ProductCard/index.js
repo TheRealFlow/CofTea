@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import {useStore} from 'zustand';
 
 import {products} from '../../../backend/db';
 import StyledButton from '../Button/styled';
@@ -9,8 +8,6 @@ import StyledProductPrice from '../ProductPrice/styled';
 import StyledProductCard from './styled';
 
 export default function ProductCard() {
-	const addToCart = useStore(state => state.addToCart);
-
 	return products.map(product => {
 		return (
 			<StyledProductCard key={product.id}>
@@ -23,14 +20,7 @@ export default function ProductCard() {
 				/>
 				<StyledProductName>{product.name}</StyledProductName>
 				<StyledProductPrice>{product.price}</StyledProductPrice>
-				<StyledButton
-					variant="default"
-					onClick={() => {
-						addToCart(product);
-					}}
-				>
-					Add To Cart
-				</StyledButton>
+				<StyledButton>Add To Cart</StyledButton>
 			</StyledProductCard>
 		);
 	});
