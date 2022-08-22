@@ -27,7 +27,7 @@ export default function CartItem({id, name, price, imgUrl}) {
 					deleteFromCart({name});
 				}}
 			>
-				Add To Cart
+				Delete
 			</StyledButton>
 		</StyledCartItem>
 	);
