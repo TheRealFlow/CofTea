@@ -7,8 +7,8 @@ import StyledProductPrice from '../ProductPrice/styled';
 
 import StyledProductCard from './styled';
 
-export default function ProductCard({id, name, price, imgUrl, product}) {
-	const addToCart = useStore(state => state.addToCart);
+export default function ProductCard({id, name, price, imgUrl}) {
+	const setInCart = useStore(state => state.setInCart);
 
 	return (
 		<StyledProductCard key={id}>
@@ -24,7 +24,7 @@ export default function ProductCard({id, name, price, imgUrl, product}) {
 			<StyledButton
 				variant="default"
 				onClick={() => {
-					addToCart({product});
+					setInCart({id});
 				}}
 			>
 				Add To Cart
