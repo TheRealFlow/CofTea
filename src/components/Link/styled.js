@@ -50,6 +50,12 @@ const StyledLink = styled.a`
 				background-color: lightgray;
 			}
 		`}
+		${({variant}) =>
+		variant === 'checkout' &&
+		css`
+			color: white;
+			background-color: lightgreen;
+		`}
 `;
 
 export default StyledLink;
