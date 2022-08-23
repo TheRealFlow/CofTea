@@ -11,14 +11,8 @@ export default function ProductCard({id, name, price, imgUrl, category}) {
 	const addToCart = useStore(state => state.addToCart);
 
 	return (
-		<StyledProductCard key={id} category={category}>
-			<Image
-				alt={'Photo from the product'}
-				src={imgUrl}
-				width={100}
-				height={100}
-				layout="fixed"
-			/>
+		<StyledProductCard category={category}>
+			<Image alt={''} src={imgUrl} width={100} height={100} layout="fixed" />
 			<StyledProductName>{name}</StyledProductName>
 			<StyledProductPrice>{price}</StyledProductPrice>
 			<StyledButton
