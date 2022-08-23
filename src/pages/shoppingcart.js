@@ -22,17 +22,15 @@ export default function ShoppingCartPage() {
 			</Link>
 			<ShoppingCart />
 			<Link href="/" aria-label="Checkout Button">
-				<a>
-					<StyledButton
-						onClick={() => {
-							checkoutMessage();
-							clearCart();
-						}}
-						variant="checkout"
-					>
-						Checkout
-					</StyledButton>
-				</a>
+				<StyledButton
+					onClick={() => {
+						checkoutMessage();
+						clearCart();
+					}}
+					variant="checkout"
+				>
+					Checkout
+				</StyledButton>
 			</Link>
 		</>
 	);
