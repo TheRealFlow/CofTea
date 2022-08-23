@@ -15,7 +15,7 @@ function ShoppingCart() {
 						name={cartProduct.name}
 						price={cartProduct.price}
 						imgUrl={cartProduct.imgUrl}
-						productid={cartProduct.id}
+						productId={cartProduct.id}
 					/>
 				);
 			})}
