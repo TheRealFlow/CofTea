@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import ProductCard from '../components/ProductCard';
 import StyledProductList from '../components/ProductList/styled';
 
-export default function showTea() {
+export default function ShowTea() {
 	return (
 		<>
 			<Header />

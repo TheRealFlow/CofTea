@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import ProductCard from '../components/ProductCard';
 import StyledProductList from '../components/ProductList/styled';
 
-export default function showCoffee() {
+export default function ShowCoffee() {
 	return (
 		<>
 			<Header />
