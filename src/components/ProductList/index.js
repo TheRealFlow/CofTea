@@ -10,6 +10,7 @@ export default function ProductList() {
 				return (
 					<ProductCard
 						key={product.id}
+						id={product.id}
 						name={product.name}
 						price={product.price}
 						imgUrl={product.imgUrl}

@@ -7,7 +7,7 @@ import StyledProductPrice from '../ProductPrice/styled';
 
 import StyledCartItem from './styled';
 
-export default function CartItem({id, imgUrl, name, price}) {
+export default function CartItem({productid, id, imgUrl, name, price}) {
 	const deleteFromCart = useStore(state => state.deleteFromCart);
 
 	return (
@@ -24,7 +24,7 @@ export default function CartItem({id, imgUrl, name, price}) {
 			<StyledButton
 				variant="delete"
 				onClick={() => {
-					deleteFromCart(id);
+					deleteFromCart(productid);
 				}}
 			>
 				Delete
