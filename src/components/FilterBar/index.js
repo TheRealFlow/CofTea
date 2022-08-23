@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import StyledButton from '../Button/styled';
+import StyledLink from '../Link/styled';
 
 import StyledFilterBar from './styled';
 
@@ -8,13 +8,13 @@ export default function FilterBar() {
 	return (
 		<StyledFilterBar>
 			<Link href="./coffee">
-				<StyledButton variant="coffee">Coffee</StyledButton>
+				<StyledLink variant="coffee">Coffee</StyledLink>
 			</Link>
 			<Link href="./tea">
-				<StyledButton variant="tea">Tea</StyledButton>
+				<StyledLink variant="tea">Tea</StyledLink>
 			</Link>
 			<Link href="./">
-				<StyledButton variant="all">Show All</StyledButton>
+				<StyledLink variant="all">Show all</StyledLink>
 			</Link>
 		</StyledFilterBar>
 	);
