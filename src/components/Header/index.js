@@ -10,7 +10,7 @@ export default function Header() {
 			<Link href="./">
 				<h1>COFTEA</h1>
 			</Link>
-			<Link href="./shoppingcart" aria-label="Shopping Cart">
+			<Link href="/shoppingcart" aria-label="Shopping Cart">
 				<a>
 					<SVG size="40px" color="burlywood" variant="cart" />
 				</a>
