@@ -1,9 +1,11 @@
 import Link from 'next/link';
 
 import SVG from '../../public/SVG/svg';
+
 import ShoppingCart from '../components/CartList';
 import Header from '../components/Header';
 import StyledLink from '../components/Link/styled';
+
 import useStore from '../hooks/useStore';
 
 export default function ShoppingCartPage() {
@@ -22,6 +24,7 @@ export default function ShoppingCartPage() {
 			</Link>
 			<ShoppingCart />
 			<Link href="/" aria-label="Checkout Button">
+
 				<StyledLink
 					onClick={() => {
 						checkoutMessage();
@@ -31,6 +34,7 @@ export default function ShoppingCartPage() {
 				>
 					Checkout
 				</StyledLink>
+
 			</Link>
 		</>
 	);
