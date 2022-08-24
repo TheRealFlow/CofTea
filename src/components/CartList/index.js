@@ -13,6 +13,7 @@ function ShoppingCart() {
 					<CartItem
 						key={cartProduct.id}
 						name={cartProduct.name}
+						alt={cartProduct.alt}
 						price={cartProduct.price}
 						imgUrl={cartProduct.imgUrl}
 						productId={cartProduct.id}

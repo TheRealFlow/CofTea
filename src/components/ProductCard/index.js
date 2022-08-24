@@ -9,15 +9,15 @@ import StyledProductPrice from '../ProductPrice/styled';
 
 import StyledProductCard from './styled';
 
-export default function ProductCard({id, name, price, imgUrl, category}) {
+export default function ProductCard({id, name, alt, price, imgUrl, category}) {
 	const addToCart = useStore(state => state.addToCart);
 
 	return (
 		<StyledProductCard category={category}>
-			<Image alt={''} src={imgUrl} width={100} height={100} layout="fixed" />
+			<Image alt={alt} src={imgUrl} width={100} height={100} layout="fixed" />
 			<StyledProductName>{name}</StyledProductName>
 			<StyledProductPrice>{price}</StyledProductPrice>
-			<Link href="/">
+			<Link href="/" aria-label="Info Button">
 				<a>
 					<SVG size="30px" color="burlywood" variant="info" />
 				</a>
