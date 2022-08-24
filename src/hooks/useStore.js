@@ -2,10 +2,10 @@ import create from 'zustand';
 
 const useStore = create(set => ({
 	cartProducts: [],
-	addToCart: name => {
+	addToCart: id => {
 		set(state => {
 			return {
-				cartProducts: [...state.cartProducts, name],
+				cartProducts: [...state.cartProducts, id],
 			};
 		});
 	},

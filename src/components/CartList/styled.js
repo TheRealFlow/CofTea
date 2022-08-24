@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledProductList = styled.ul`
+const StyledCartList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,4 +10,4 @@ const StyledProductList = styled.ul`
 	list-style: none;
 `;
 
-export default StyledProductList;
+export default StyledCartList;
