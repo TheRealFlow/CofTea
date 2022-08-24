@@ -8,9 +8,8 @@ import StyledProductPrice from '../ProductPrice/styled';
 
 import StyledCartItem from './styled';
 
-export default function CartItem({productId, imgUrl, name, price}) {
+export default function CartItem({productId, imgUrl, name, price, count}) {
 	const deleteFromCart = useStore(state => state.deleteFromCart);
-	const count = useStore(state => state.count);
 	const addCount = useStore(state => state.addCount);
 	const minusCount = useStore(state => state.minusCount);
 
@@ -27,11 +26,22 @@ export default function CartItem({productId, imgUrl, name, price}) {
 			>
 				Delete
 			</StyledButton>
-			<StyledButton type="button" onClick={addCount}>
+			<StyledButton
+				type="button"
+				onClick={() => {
+					addCount(productId);
+				}}
+			>
 				<SVG size="40px" color="green" variant="plusCounter" />
 			</StyledButton>
 			<p>{count}</p>
-			<StyledButton type="button" disabled={count === 0} onClick={minusCount}>
+			<StyledButton
+				type="button"
+				disabled={count === 0}
+				onClick={() => {
+					minusCount(productId);
+				}}
+			>
 				<SVG size="40px" color="red" variant="minusCounter" />
 			</StyledButton>
 		</StyledCartItem>
