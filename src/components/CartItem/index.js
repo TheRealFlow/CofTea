@@ -28,6 +28,7 @@ export default function CartItem({productId, imgUrl, name, price, count}) {
 			</StyledButton>
 			<StyledButton
 				type="button"
+				variant="counter"
 				onClick={() => {
 					addCount(productId);
 				}}
@@ -37,6 +38,7 @@ export default function CartItem({productId, imgUrl, name, price, count}) {
 			<p>{count}</p>
 			<StyledButton
 				type="button"
+				variant="counter"
 				disabled={count === 0}
 				onClick={() => {
 					minusCount(productId);
