@@ -2,19 +2,34 @@ import create from 'zustand';
 
 const useStore = create(set => ({
 	cartProducts: [],
-	count: 0,
-	addToCart: id => {
+	addToCart: productInfo => {
 		set(state => {
 			return {
-				cartProducts: [...state.cartProducts, id],
+				cartProducts: [...state.cartProducts, {...productInfo, count: 1}],
 			};
 		});
 	},
-	addCount: () => {
-		set(state => ({count: state.count + 1}));
+	addCount: id => {
+		set(state => {
+			return {
+				cartProducts: state.cartProducts.map(cartProduct =>
+					cartProduct.id === id
+						? {...cartProduct, count: cartProduct.count + 1}
+						: cartProduct
+				),
+			};
+		});
 	},
-	minusCount: () => {
-		set(state => ({count: state.count - 1}));
+	minusCount: id => {
+		set(state => {
+			return {
+				cartProducts: state.cartProducts.map(cartProduct =>
+					cartProduct.id === id
+						? {...cartProduct, count: cartProduct.count - 1}
+						: cartProduct
+				),
+			};
+		});
 	},
 
 	deleteFromCart: id => {
