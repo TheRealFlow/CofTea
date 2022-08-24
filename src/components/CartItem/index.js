@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
 import StyledProductName from '../ProductName/styled';
@@ -22,6 +23,12 @@ export default function CartItem({productId, imgUrl, name, price}) {
 				}}
 			>
 				Delete
+			</StyledButton>
+			<StyledButton>
+				<SVG size="40px" color="green" variant="plusCounter" />
+			</StyledButton>
+			<StyledButton>
+				<SVG size="40px" color="red" variant="minusCounter" />
 			</StyledButton>
 		</StyledCartItem>
 	);
