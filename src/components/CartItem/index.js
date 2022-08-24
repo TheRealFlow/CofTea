@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {useState} from 'react';
 
 import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
@@ -10,6 +11,7 @@ import StyledCartItem from './styled';
 
 export default function CartItem({productId, imgUrl, name, price}) {
 	const deleteFromCart = useStore(state => state.deleteFromCart);
+	const [count, setCount] = useState(1);
 
 	return (
 		<StyledCartItem>
@@ -24,10 +26,21 @@ export default function CartItem({productId, imgUrl, name, price}) {
 			>
 				Delete
 			</StyledButton>
-			<StyledButton>
+			<StyledButton
+				type="button"
+				onClick={() => {
+					setCount(count + 1);
+				}}
+			>
 				<SVG size="40px" color="green" variant="plusCounter" />
 			</StyledButton>
-			<StyledButton>
+			<p>{count}</p>
+			<StyledButton
+				type="button"
+				onClick={() => {
+					setCount(count - 1);
+				}}
+			>
 				<SVG size="40px" color="red" variant="minusCounter" />
 			</StyledButton>
 		</StyledCartItem>
