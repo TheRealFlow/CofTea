@@ -102,3 +102,11 @@ export const products = [
 		imgUrl: 'https://images.unsplash.com/photo-1501199532894-9449c0a85a77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
 	},
 ];
+
+export function getAllProducts() {
+	return products;
+}
+
+export function getProductById(id) {
+	return products.find(product => product.id === id);
+}
