@@ -7,10 +7,10 @@ import StyledFilterBar from './styled';
 export default function FilterBar() {
 	return (
 		<StyledFilterBar>
-			<Link href="/products/coffee">
+			<Link href="/category/coffee">
 				<StyledLink variant="coffee">Coffee</StyledLink>
 			</Link>
-			<Link href="/products/tea">
+			<Link href="/category/tea">
 				<StyledLink variant="tea">Tea</StyledLink>
 			</Link>
 			<Link href="./">

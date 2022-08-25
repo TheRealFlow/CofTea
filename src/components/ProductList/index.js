@@ -15,7 +15,6 @@ export default function ProductList() {
 						alt={product.alt}
 						price={product.price}
 						imgUrl={product.imgUrl}
-						inCart={product.inCart}
 					/>
 				);
 			})}

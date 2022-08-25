@@ -17,7 +17,7 @@ export default function ProductCard({id, name, alt, price, imgUrl, category}) {
 			<Image alt={alt} src={imgUrl} width={100} height={100} layout="fixed" />
 			<StyledProductName>{name}</StyledProductName>
 			<StyledProductPrice>{price}</StyledProductPrice>
-			<Link href="/" aria-label="Info Button">
+			<Link href={`/product/${id}`} aria-label="Info Button">
 				<a>
 					<SVG size="30px" color="burlywood" variant="info" />
 				</a>
