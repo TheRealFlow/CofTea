@@ -1,24 +1,21 @@
-import useStore from '../../hooks/useStore';
+import Link from 'next/link';
+
+import StyledLink from '../Link/styled';
 
 import StyledFilterBar from './styled';
+
 export default function FilterBar() {
-	const filterCategory = useStore(state => state.filterCategory);
 	return (
 		<StyledFilterBar>
-			<button
-				onClick={() => {
-					filterCategory('coffee');
-				}}
-			>
-				Coffee
-			</button>
-			<button
-				onClick={() => {
-					filterCategory('tea');
-				}}
-			>
-				Tee
-			</button>
+			<Link href="/category/coffee">
+				<StyledLink variant="coffee">Coffee</StyledLink>
+			</Link>
+			<Link href="/category/tea">
+				<StyledLink variant="tea">Tea</StyledLink>
+			</Link>
+			<Link href="/">
+				<StyledLink variant="all">Show all</StyledLink>
+			</Link>
 		</StyledFilterBar>
 	);
 }
