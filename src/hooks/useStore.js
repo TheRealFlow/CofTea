@@ -14,16 +14,6 @@ const useStore = create(set => ({
 		});
 	},
 
-	filterCategory: category => {
-		set(state => {
-			return {
-				products: state.products
-					.map(product => product)
-					.filter(product => product.category === category),
-			};
-		});
-	},
-
 	clearCart: () => {
 		set(() => {
 			return {
