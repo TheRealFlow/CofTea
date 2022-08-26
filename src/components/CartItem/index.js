@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
 import StyledProductName from '../ProductName/styled';
@@ -17,18 +18,22 @@ export default function CartItem({product}) {
 			<p>{product.quantity}</p>
 
 			<StyledButton
+				type="button"
+				variant="counter"
 				onClick={() => {
 					changeQuantity(product.id, -1);
 				}}
 			>
-				minus
+				<SVG size="40px" color="red" variant="minusCounter" />
 			</StyledButton>
 			<StyledButton
+				type="button"
+				variant="counter"
 				onClick={() => {
 					changeQuantity(product.id, 1);
 				}}
 			>
-				plus
+				<SVG size="40px" color="green" variant="plusCounter" />
 			</StyledButton>
 		</StyledCartItem>
 	);
