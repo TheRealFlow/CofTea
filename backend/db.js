@@ -112,7 +112,3 @@ export const products = [
 		quantity: 0,
 	},
 ];
-
-export function getAllProducts() {
-	return products;
-}

@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 
-import {getAllProducts} from '../../../backend/db';
 import StyledButton from '../../components/Button/styled';
 import StyledDetailPage from '../../components/Detailpage/styled';
 import StyledLink from '../../components/Link/styled';
@@ -12,8 +11,7 @@ import StyledProductPrice from '../../components/ProductPrice/styled';
 import useStore from '../../hooks/useStore';
 
 export default function DetailsPage() {
-	const addToCart = useStore(state => state.addToCart);
-	const products = getAllProducts();
+	const products = useStore(state => state.products);
 	const {query} = useRouter();
 
 	return (
@@ -35,14 +33,7 @@ export default function DetailsPage() {
 								{product.description}
 							</StyledProductDescription>
 							<StyledProductPrice>{product.price}</StyledProductPrice>
-							<StyledButton
-								variant="default"
-								onClick={() => {
-									addToCart({product});
-								}}
-							>
-								Add to Cart
-							</StyledButton>
+							<StyledButton variant="default">Add to Cart</StyledButton>
 							<Link href="/" aria-label="Checkout Button">
 								<StyledLink variant="back">Back to Products</StyledLink>
 							</Link>

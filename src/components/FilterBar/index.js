@@ -13,7 +13,7 @@ export default function FilterBar() {
 			<Link href="/category/tea">
 				<StyledLink variant="tea">Tea</StyledLink>
 			</Link>
-			<Link href="./">
+			<Link href="/">
 				<StyledLink variant="all">Show all</StyledLink>
 			</Link>
 		</StyledFilterBar>

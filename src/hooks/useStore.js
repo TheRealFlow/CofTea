@@ -1,27 +1,22 @@
 import create from 'zustand';
 
+import {products} from '../../backend/db';
+
 const useStore = create(set => ({
-	cartProducts: [],
-	addToCart: id => {
+	products,
+	changeQuantity: (id, change) => {
 		set(state => {
 			return {
-				cartProducts: [...state.cartProducts, id],
+				products: state.products.map(product =>
+					product.id === id ? {...product, quantity: product.quantity + change} : product
+				),
 			};
 		});
 	},
-
-	deleteFromCart: id => {
-		set(state => {
-			return {
-				cartProducts: state.cartProducts.filter(cartProduct => cartProduct.id !== id),
-			};
-		});
-	},
-
 	clearCart: () => {
 		set(() => {
 			return {
-				cartProducts: [],
+				products,
 			};
 		});
 	},

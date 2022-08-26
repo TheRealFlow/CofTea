@@ -9,15 +9,15 @@ import StyledProductPrice from '../ProductPrice/styled';
 
 import StyledProductCard from './styled';
 
-export default function ProductCard({id, name, alt, price, imgUrl, category}) {
-	const addToCart = useStore(state => state.addToCart);
+export default function ProductCard({product}) {
+	const changeQuantity = useStore(state => state.changeQuantity);
 
 	return (
-		<StyledProductCard category={category}>
-			<Image alt={alt} src={imgUrl} width={100} height={100} layout="fixed" />
-			<StyledProductName>{name}</StyledProductName>
-			<StyledProductPrice>{price}</StyledProductPrice>
-			<Link href={`/product/${id}`} aria-label="Info Button">
+		<StyledProductCard category={product.category}>
+			<Image alt={product.alt} src={product.imgUrl} width={100} height={100} layout="fixed" />
+			<StyledProductName>{product.name}</StyledProductName>
+			<StyledProductPrice>{product.price}</StyledProductPrice>
+			<Link href={`/product/${product.id}`} aria-label="Info Button">
 				<a>
 					<SVG size="30px" color="burlywood" variant="info" />
 				</a>
@@ -25,7 +25,7 @@ export default function ProductCard({id, name, alt, price, imgUrl, category}) {
 			<StyledButton
 				variant="default"
 				onClick={() => {
-					addToCart({id, name, price, imgUrl});
+					changeQuantity(product.id, 1);
 				}}
 			>
 				Add To Cart
