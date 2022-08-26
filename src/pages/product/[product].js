@@ -1,13 +1,18 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 import {getAllProducts} from '../../../backend/db';
+import StyledButton from '../../components/Button/styled';
 import StyledDetailPage from '../../components/Detailpage/styled';
 import StyledLink from '../../components/Link/styled';
+import StyledProductDescription from '../../components/ProductDescription/styled';
 import StyledProductName from '../../components/ProductName/styled';
 import StyledProductPrice from '../../components/ProductPrice/styled';
+import useStore from '../../hooks/useStore';
 
 export default function DetailsPage() {
+	const addToCart = useStore(state => state.addToCart);
 	const products = getAllProducts();
 	const {query} = useRouter();
 
@@ -22,15 +27,25 @@ export default function DetailsPage() {
 								key={product.id}
 								alt={product.alt}
 								src={product.imgUrl}
-								width={100}
-								height={100}
-								layout="responsive"
+								width={400}
+								height={350}
 							/>
 							<StyledProductName>{product.name}</StyledProductName>
+							<StyledProductDescription>
+								{product.description}
+							</StyledProductDescription>
 							<StyledProductPrice>{product.price}</StyledProductPrice>
-							<p>{product.description}</p>
-							<StyledLink>Back to Products</StyledLink>
-							<StyledLink>Add to Cart</StyledLink>
+							<StyledButton
+								variant="default"
+								onClick={() => {
+									addToCart({product});
+								}}
+							>
+								Add to Cart
+							</StyledButton>
+							<Link href="/" aria-label="Checkout Button">
+								<StyledLink variant="back">Back to Products</StyledLink>
+							</Link>
 						</>
 					);
 				})}
