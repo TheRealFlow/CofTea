@@ -1,6 +1,5 @@
 import {useRouter} from 'next/router';
 
-import FilterBar from '../../components/FilterBar';
 import Header from '../../components/Header';
 import ProductCard from '../../components/ProductCard';
 import StyledProductList from '../../components/ProductList/styled';
@@ -15,7 +14,6 @@ export default function Product() {
 	return (
 		<>
 			<Header />
-			<FilterBar />
 			<StyledProductList>
 				{products
 					.filter(product => {
