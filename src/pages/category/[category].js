@@ -2,6 +2,7 @@ import {useRouter} from 'next/router';
 
 import FilterBar from '../../components/FilterBar';
 import Header from '../../components/Header';
+import ProductCard from '../../components/ProductCard';
 import StyledProductList from '../../components/ProductList/styled';
 import useStore from '../../hooks/useStore';
 
@@ -16,7 +17,7 @@ export default function Category() {
 				{products
 					.filter(product => product.category === query.category)
 					.map(product => (
-						<div key={product.id}>{product.name}</div>
+						<ProductCard key={product.id} product={product} />
 					))}
 			</StyledProductList>
 		</>
