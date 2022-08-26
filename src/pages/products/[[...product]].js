@@ -8,6 +8,7 @@ import useStore from '../../hooks/useStore';
 
 export default function Product() {
 	const products = useStore(state => state.products);
+
 	const router = useRouter();
 	const [filter] = router.query.product ?? [''];
 
