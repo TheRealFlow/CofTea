@@ -14,7 +14,7 @@ export default function CartItem({product}) {
 		<StyledCartItem>
 			<Image alt={''} src={product.imgUrl} width={100} height={100} layout="fixed" />
 			<StyledProductName>{product.name}</StyledProductName>
-			<StyledProductPrice>{product.price * product.quantity}</StyledProductPrice>
+			<StyledProductPrice>{product.price * product.quantity}€</StyledProductPrice>
 			<p>{product.quantity}</p>
 
 			<StyledButton
