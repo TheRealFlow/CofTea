@@ -1,14 +1,16 @@
 import {useRouter} from 'next/router';
 
-import {products} from '../../../backend/db';
 import FilterBar from '../../components/FilterBar';
 import Header from '../../components/Header';
 import ProductCard from '../../components/ProductCard';
 import StyledProductList from '../../components/ProductList/styled';
+import useStore from '../../hooks/useStore';
 
 export default function Product() {
+	const products = useStore(state => state.products);
 	const router = useRouter();
 	const [filter] = router.query.product ?? [''];
+
 	return (
 		<>
 			<Header />
