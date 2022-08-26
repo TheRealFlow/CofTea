@@ -56,6 +56,22 @@ const StyledLink = styled.a`
 			color: white;
 			background-color: lightgreen;
 		`}
+
+		${({variant}) =>
+		variant === 'back' &&
+		css`
+		margin: 0.5rem;
+		padding: 0.25rem 0.5rem;
+		border-radius: 10px;
+		border: 1px solid black
+		font-size: 0.25rem;
+		color: white;
+		background-color: brown;
+
+			&:active {
+				color: black;
+				background-color: lightgray;
+		`}
 `;
 
 export default StyledLink;
