@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
 import StyledProductName from '../ProductName/styled';
@@ -8,43 +7,28 @@ import StyledProductPrice from '../ProductPrice/styled';
 
 import StyledCartItem from './styled';
 
-export default function CartItem({productId, imgUrl, name, price, count}) {
-	const deleteFromCart = useStore(state => state.deleteFromCart);
-	const addCount = useStore(state => state.addCount);
-	const minusCount = useStore(state => state.minusCount);
-
+export default function CartItem({product}) {
+	const changeQuantity = useStore(state => state.changeQuantity);
 	return (
 		<StyledCartItem>
-			<Image alt={''} src={imgUrl} width={100} height={100} layout="fixed" />
-			<StyledProductName>{name}</StyledProductName>
-			<StyledProductPrice>{count * price}</StyledProductPrice>
+			<Image alt={''} src={product.imgUrl} width={100} height={100} layout="fixed" />
+			<StyledProductName>{product.name}</StyledProductName>
+			<StyledProductPrice>{product.price}</StyledProductPrice>
+			<p>{product.quantity}</p>
+
 			<StyledButton
-				variant="delete"
 				onClick={() => {
-					deleteFromCart(productId);
+					changeQuantity(product.id, -1);
 				}}
 			>
-				Delete
+				minus
 			</StyledButton>
 			<StyledButton
-				type="button"
-				variant="counter"
 				onClick={() => {
-					addCount(productId);
+					changeQuantity(product.id, 1);
 				}}
 			>
-				<SVG size="40px" color="green" variant="plusCounter" />
-			</StyledButton>
-			<p>{count}</p>
-			<StyledButton
-				type="button"
-				variant="counter"
-				disabled={count === 0}
-				onClick={() => {
-					minusCount(productId);
-				}}
-			>
-				<SVG size="40px" color="red" variant="minusCounter" />
+				plus
 			</StyledButton>
 		</StyledCartItem>
 	);
