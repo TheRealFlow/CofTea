@@ -42,6 +42,12 @@ const StyledButton = styled.button`
 			color: white;
 			background-color: lightgreen;
 		`}
+		${({variant}) =>
+		variant === 'counter' &&
+		css`
+			background-color: transparent;
+			border: none;
+		`}
 `;
 
 export default StyledButton;

@@ -7,7 +7,7 @@ import StyledHeader from './styled';
 export default function Header() {
 	return (
 		<StyledHeader>
-			<Link href="./">
+			<Link href="/">
 				<h1>COFTEA</h1>
 			</Link>
 			<Link href="/shoppingcart" aria-label="Shopping Cart">
