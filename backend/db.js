@@ -97,8 +97,6 @@ export const products = [
 			'An Iced Mocha is made with 20 ml Chocolate Sauce, 80 ml brewed Coffee, 80 ml Milk, and 20ml whipped Cream on top. Served in a tall glass with ice cubes',
 		alt: 'Photo of a Iced Mocha',
 		price: 5.2,
-		name: 'Iced Mocca',
-		price: 4.9,
 		imgUrl: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
 		quantity: 0,
 	},

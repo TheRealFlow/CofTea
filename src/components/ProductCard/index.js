@@ -11,8 +11,7 @@ import StyledProductCard from './styled';
 
 export default function ProductCard({product}) {
 	const changeQuantity = useStore(state => state.changeQuantity);
-
-  return (
+	return (
 		<StyledProductCard category={product.category}>
 			<Image alt={product.alt} src={product.imgUrl} width={100} height={100} layout="fixed" />
 			<StyledProductName>{product.name}</StyledProductName>
