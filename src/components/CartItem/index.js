@@ -16,7 +16,6 @@ export default function CartItem({product}) {
 			<StyledProductName>{product.name}</StyledProductName>
 			<StyledProductPrice>{product.price * product.quantity}€</StyledProductPrice>
 			<p>{product.quantity}</p>
-
 			<StyledButton
 				type="button"
 				variant="counter"
