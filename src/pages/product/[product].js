@@ -11,6 +11,7 @@ import StyledProductPrice from '../../components/ProductPrice/styled';
 import useStore from '../../hooks/useStore';
 
 export default function DetailsPage() {
+	const changeQuantity = useStore(state => state.changeQuantity);
 	const products = useStore(state => state.products);
 	const {query} = useRouter();
 
@@ -33,7 +34,14 @@ export default function DetailsPage() {
 								{product.description}
 							</StyledProductDescription>
 							<StyledProductPrice>{product.price}</StyledProductPrice>
-							<StyledButton variant="default">Add to Cart</StyledButton>
+							<StyledButton
+								variant="default"
+								onClick={() => {
+									changeQuantity(product.id, 1);
+								}}
+							>
+								Add to Cart
+							</StyledButton>
 							<Link href="/" aria-label="Checkout Button">
 								<StyledLink variant="back">Back to Products</StyledLink>
 							</Link>
