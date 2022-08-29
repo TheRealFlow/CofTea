@@ -13,7 +13,6 @@ const useStore = create(set => ({
 			};
 		});
 	},
-
 	clearCart: () => {
 		set(() => {
 			return {

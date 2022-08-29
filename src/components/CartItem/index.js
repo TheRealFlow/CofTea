@@ -10,6 +10,7 @@ import StyledCartItem from './styled';
 
 export default function CartItem({product}) {
 	const changeQuantity = useStore(state => state.changeQuantity);
+
 	return (
 		<StyledCartItem>
 			<Image alt={''} src={product.imgUrl} width={100} height={100} layout="fixed" />
