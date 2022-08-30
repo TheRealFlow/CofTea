@@ -24,7 +24,7 @@ export default function CartBanner() {
 			</StyledCartTag>
 			<StyledCartTag>
 				<StyledCartCounter>{totalQuantity}</StyledCartCounter>
-				<SVG size="30px" color="black" variant="totalQuantity" />
+				<SVG size="30px" color="black" variant="cart" />
 			</StyledCartTag>
 		</StyledCartBanner>
 	);
