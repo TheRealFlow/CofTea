@@ -53,8 +53,10 @@ const StyledLink = styled.a`
 		${({variant}) =>
 		variant === 'checkout' &&
 		css`
-			color: white;
-			background-color: lightgreen;
+			margin: 0.5rem;
+			padding: 0.4rem 1.3rem;
+			border-radius: 10px;
+			background-color: burlywood;
 		`}
 
 		${({variant}) =>
