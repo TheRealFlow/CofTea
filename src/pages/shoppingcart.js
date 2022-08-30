@@ -14,7 +14,6 @@ export default function ShoppingCartPage() {
 	return (
 		<>
 			<Header />
-
 			<Link href="/" aria-label="Back Arrow">
 				<a>
 					<SVG size="40px" color="black" variant="backArrow" />
