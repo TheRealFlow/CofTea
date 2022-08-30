@@ -1,3 +1,4 @@
+import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledCartTag from '../CartTag/styled';
 
@@ -18,9 +19,11 @@ export default function CartBanner() {
 		<StyledCartBanner>
 			<StyledCartTag>
 				<h2>{totalPrice} €</h2>
+				<SVG size="40px" color="black" variant="totalPrice" />
 			</StyledCartTag>
 			<StyledCartTag>
 				<h2>{totalQuantity}</h2>
+				<SVG size="40px" color="black" variant="totalQuantity" />
 			</StyledCartTag>
 		</StyledCartBanner>
 	);
