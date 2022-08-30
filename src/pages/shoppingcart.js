@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import SVG from '../../public/SVG/svg';
+import CartBanner from '../components/CartBanner';
 import ShoppingCart from '../components/CartList';
 import Header from '../components/Header';
 import StyledLink from '../components/Link/styled';
@@ -19,6 +20,7 @@ export default function ShoppingCartPage() {
 					<SVG size="40px" color="black" variant="backArrow" />
 				</a>
 			</Link>
+			<CartBanner />
 			<ShoppingCart />
 			<Link href="/" aria-label="Checkout Button">
 				<StyledLink
