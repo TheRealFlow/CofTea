@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 const StyledCartTag = styled.div`
-	padding: 0.3rem;
-	border: 4px dashed white;
-	border-radius: 1px;
+	position: relative;
+	margin: 0.8rem;
+	padding: 0.8rem;
+	border: 2px dashed whitesmoke;
+	border-radius: 15px;
 `;
 export default StyledCartTag;
