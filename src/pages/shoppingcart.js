@@ -2,16 +2,10 @@ import Link from 'next/link';
 
 import SVG from '../../public/SVG/svg';
 import ShoppingCart from '../components/CartList';
-import CommentField from '../components/CommentField';
 import Header from '../components/Header';
-import StyledLink from '../components/Link/styled';
-import useStore from '../hooks/useStore';
+import OrderForm from '../components/OrderForm';
 
 export default function ShoppingCartPage() {
-	const checkoutMessage = () => {
-		alert('Your order has been successfully processed');
-	};
-	const clearCart = useStore(state => state.clearCart);
 	return (
 		<>
 			<Header />
@@ -21,18 +15,7 @@ export default function ShoppingCartPage() {
 				</a>
 			</Link>
 			<ShoppingCart />
-			<CommentField />
-			<Link href="/" aria-label="Checkout Button">
-				<StyledLink
-					onClick={() => {
-						checkoutMessage();
-						clearCart();
-					}}
-					variant="checkout"
-				>
-					Checkout
-				</StyledLink>
-			</Link>
+			<OrderForm />
 		</>
 	);
 }
