@@ -12,7 +12,6 @@ export default function CommentField() {
 			<p>Comments to your order</p>
 			<textarea
 				maxLength={100}
-				rows={4}
 				placeholder={'Coffee with milk, Tea with sugar, ...'}
 				onChange={calculate}
 			/>
