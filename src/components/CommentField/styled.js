@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 
-const StyledCommentField = styled.div`
-	display: flex;
+const StyledCommentField = styled.fieldset`
+	display: inline-flex;
 	flex-direction: column;
-	align-items: center;
-	margin: 1rem;
-	p {
-		margin: 0;
-		font-size: 0.9rem;
-		font-weight: bold;
-	}
+	justify-content: space-evenly;
+	width: 80vw;
+	margin: 0.5rem;
+	padding: 0.75rem;
+	border: 2px solid burlywood;
+	border-radius: 10px;
 	textarea {
-		width: 80vw;
-		height: 10vh;
+		height: 13vh;
+		padding: 0.5rem;
 		border: 2px solid burlywood;
+		border-radius: 10px;
 		font-size: 0.75rem;
 	}
 	span {
 		font-size: 0.75rem;
+		text-align: right;
 	}
 `;
 
