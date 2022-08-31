@@ -10,17 +10,7 @@ export default function Header() {
 	const path = router.asPath;
 	return (
 		<StyledHeader>
-			{path === '/' ? (
-				<>
-					<h1>COFTEA</h1>
-
-					<Link href="/shoppingcart" aria-label="Shopping Cart">
-						<a>
-							<SVG size="40px" color="burlywood" variant="cart" />
-						</a>
-					</Link>
-				</>
-			) : (
+			{path === '/shoppingcart' ? (
 				<>
 					<Link href="/" aria-label="Home Page">
 						<a>
@@ -29,6 +19,16 @@ export default function Header() {
 					</Link>
 
 					<h1>SHOPPING CART</h1>
+				</>
+			) : (
+				<>
+					<h1>COFTEA</h1>
+
+					<Link href="/shoppingcart" aria-label="Shopping Cart">
+						<a>
+							<SVG size="40px" color="burlywood" variant="cart" />
+						</a>
+					</Link>
 				</>
 			)}
 		</StyledHeader>
