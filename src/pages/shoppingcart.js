@@ -4,7 +4,7 @@ import SVG from '../../public/SVG/svg';
 import CartBanner from '../components/CartBanner';
 import ShoppingCart from '../components/CartList';
 import CommentField from '../components/CommentField';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import StyledLink from '../components/Link/styled';
 import useStore from '../hooks/useStore';
 
@@ -14,8 +14,7 @@ export default function ShoppingCartPage() {
 	};
 	const clearCart = useStore(state => state.clearCart);
 	return (
-		<>
-			<Header />
+		<Layout>
 			<Link href="/" aria-label="Back Arrow">
 				<a>
 					<SVG size="40px" color="black" variant="backArrow" />
@@ -35,6 +34,6 @@ export default function ShoppingCartPage() {
 					Checkout
 				</StyledLink>
 			</Link>
-		</>
+		</Layout>
 	);
 }
