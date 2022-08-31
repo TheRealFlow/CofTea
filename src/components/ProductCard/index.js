@@ -23,6 +23,7 @@ export default function ProductCard({product}) {
 			</Link>
 			<StyledButton
 				type="button"
+				variant="default"
 				onClick={() => {
 					changeQuantity(product.id, 1);
 				}}
