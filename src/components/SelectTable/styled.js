@@ -21,9 +21,6 @@ const StyledSelectTable = styled.fieldset`
 		font-size: 0.9rem;
 		text-align: center;
 	}
-	option {
-		font-size: 1.2rem;
-	}
 
 	${({variant}) =>
 		variant === 'hidden' &&
