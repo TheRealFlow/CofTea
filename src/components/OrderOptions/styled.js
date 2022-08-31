@@ -1,21 +1,18 @@
 import styled from 'styled-components';
 
-const StyledOrderOptions = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	span {
-		margin: 0.6rem;
-		font-size: 0.9rem;
-		text-align: right;
-	}
+const StyledOrderOptions = styled.fieldset`
+	display: inline-flex;
+	justify-content: space-evenly;
+	width: 80vw;
+	margin: 0.5rem;
+	padding: 0.75rem;
+	border: 2px solid burlywood;
+	border-radius: 10px;
 	label {
-		margin-right: 1rem;
 		font-weight: bold;
-		text-align: center;
 	}
 	input {
-		margin: 0.5rem;
+		margin-left: 1rem;
 		transform: scale(1.3);
 	}
 `;
