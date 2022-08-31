@@ -47,7 +47,9 @@ export default function OrderForm() {
 					Here
 					<input
 						type="radio"
-						id="Here"
+						name="order"
+						id="here"
+						required
 						onClick={() => {
 							handleOrder(), handleCheckout();
 						}}
@@ -57,7 +59,9 @@ export default function OrderForm() {
 					To-Go
 					<input
 						type="radio"
+						name="order"
 						id="togo"
+						required
 						onClick={() => {
 							handleOrder(), handleCheckout(), handleHidden();
 						}}
