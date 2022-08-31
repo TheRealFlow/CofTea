@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledOrderForm = styled.div`
+const StyledOrderForm = styled.form`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
