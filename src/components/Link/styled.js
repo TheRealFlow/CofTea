@@ -72,6 +72,13 @@ const StyledLink = styled.a`
 				color: black;
 				background-color: lightgray;
 		`}
+		${({variant}) =>
+		variant === 'counterHome' &&
+		css`
+			margin: 0;
+			padding: 0;
+			border: none;
+		`}
 `;
 
 export default StyledLink;

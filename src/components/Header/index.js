@@ -2,10 +2,19 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 import SVG from '../../../public/SVG/svg';
+import useStore from '../../hooks/useStore';
+import StyledCartCounter from '../CartCounter/styled';
+import StyledLink from '../Link/styled';
 
 import StyledHeader from './styled';
 
 export default function Header() {
+	const products = useStore(state => state.products);
+	const initialQuantity = 0;
+	const totalQuantity = products.reduce(
+		(accumulator, current) => accumulator + current.quantity,
+		initialQuantity
+	);
 	const router = useRouter();
 	const path = router.asPath;
 	return (
@@ -25,9 +34,12 @@ export default function Header() {
 					<h1>COFTEA</h1>
 
 					<Link href="/shoppingcart" aria-label="Shopping Cart">
-						<a>
+						<StyledLink variant="counterHome">
 							<SVG size="40px" color="burlywood" variant="cart" />
-						</a>
+							<StyledCartCounter variant="counterHome">
+								{totalQuantity}
+							</StyledCartCounter>
+						</StyledLink>
 					</Link>
 				</>
 			)}
