@@ -10,10 +10,10 @@ import StyledHeader from './styled';
 
 export default function Header() {
 	const products = useStore(state => state.products);
-	const initialValue = 0;
+	const initialQuantity = 0;
 	const totalQuantity = products.reduce(
 		(accumulator, current) => accumulator + current.quantity,
-		initialValue
+		initialQuantity
 	);
 	const router = useRouter();
 	const path = router.asPath;
