@@ -1,19 +1,18 @@
 import Head from 'next/head';
 
 import FilterBar from '../components/FilterBar';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 import ProductList from '../components/ProductList';
 
 export default function HomePage() {
 	return (
-		<>
+		<Layout>
 			<Head>
 				<title key="title">CoffTea</title>
 				<meta key="description" name="description" content="This is our capstone-project" />
 			</Head>
-			<Header />
 			<FilterBar />
 			<ProductList />;
-		</>
+		</Layout>
 	);
 }

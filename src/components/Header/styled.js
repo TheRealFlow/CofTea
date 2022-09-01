@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
 	justify-content: space-evenly;
 	padding: 0.5rem;
 	h1 {
-		cursor: pointer;
+		font-size: xx-large;
 	}
 `;
 
