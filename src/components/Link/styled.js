@@ -75,8 +75,8 @@ const StyledLink = styled.a`
 		${({variant}) =>
 		variant === 'counterHome' &&
 		css`
-			margin: 0rem;
-			padding: 0rem;
+			margin: 0;
+			padding: 0;
 			border: none;
 		`}
 `;

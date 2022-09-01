@@ -8,8 +8,8 @@ const StyledCartCounter = styled.span`
 		variant === 'counterHome' &&
 		css`
 			display: inline-block;
-			margin: 0rem;
-			padding: 0rem;
+			margin: 0;
+			padding: 0;
 			width: 20px;
 			line-height: 20px;
 			color: whitesmoke;
