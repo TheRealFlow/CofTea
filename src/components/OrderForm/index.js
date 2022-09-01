@@ -67,7 +67,11 @@ export default function OrderForm() {
 				</label>
 			</StyledOrderOptions>
 
-			<StyledSelectTable disabled={selectOrder} variant={isHidden ? 'hidden' : ''}>
+			<StyledSelectTable
+				onClick={handleCheckout}
+				disabled={selectOrder}
+				variant={isHidden ? 'hidden' : ''}
+			>
 				<span>Select your table</span>
 				<select>
 					<option value="0">Select Table:</option>
