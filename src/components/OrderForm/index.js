@@ -24,9 +24,9 @@ export default function OrderForm() {
 
 	const [showCheckout, setShowCheckout] = useState(false);
 
-	const handleCheckout = () => {
-		setShowCheckout(current => !current);
-	};
+	function handleCheckout() {
+		setShowCheckout(disabled => !disabled);
+	}
 
 	const [characterCount, setCharacterCount] = useState(0);
 
@@ -34,9 +34,9 @@ export default function OrderForm() {
 		setCharacterCount(event.target.value.length);
 	};
 
-	const checkoutMessage = () => {
-		alert('Your order has been successfully processed');
-	};
+	function checkoutMessage() {
+		alert('Thank you for your order. Your order number is: 129');
+	}
 
 	const clearCart = useStore(state => state.clearCart);
 	return (
@@ -49,10 +49,8 @@ export default function OrderForm() {
 						type="radio"
 						name="order"
 						id="here"
-						required
-						onClick={() => {
-							handleOrder(), handleCheckout();
-						}}
+						onClick={handleOrder}
+						disabled={!selectOrder}
 					/>
 				</label>
 				<label htmlFor="togo">
@@ -61,10 +59,10 @@ export default function OrderForm() {
 						type="radio"
 						name="order"
 						id="togo"
-						required
 						onClick={() => {
 							handleOrder(), handleCheckout(), handleHidden();
 						}}
+						disabled={!selectOrder}
 					/>
 				</label>
 			</StyledOrderOptions>
@@ -73,16 +71,16 @@ export default function OrderForm() {
 				<span>Select your table</span>
 				<select>
 					<option value="0">Select Table:</option>
-					<option value="1">Table 1</option>
-					<option value="2">Table 2</option>
-					<option value="3">Table 3</option>
-					<option value="4">Table 4</option>
-					<option value="5">Table 5</option>
-					<option value="6">Table 6</option>
-					<option value="7">Table 7</option>
-					<option value="8">Table 8</option>
-					<option value="9">Table 9</option>
-					<option value="10">Table 10</option>
+					<option onClick={handleCheckout}>Table 1</option>
+					<option onClick={handleCheckout}>Table 2</option>
+					<option onClick={handleCheckout}>Table 3</option>
+					<option onClick={handleCheckout}>Table 4</option>
+					<option onClick={handleCheckout}>Table 5</option>
+					<option onClick={handleCheckout}>Table 6</option>
+					<option onClick={handleCheckout}>Table 7</option>
+					<option onClick={handleCheckout}>Table 8</option>
+					<option onClick={handleCheckout}>Table 9</option>
+					<option onClick={handleCheckout}>Table 10</option>
 				</select>
 			</StyledSelectTable>
 
@@ -99,7 +97,6 @@ export default function OrderForm() {
 			<Link href="/" aria-label="Checkout Button">
 				<StyledLink
 					onClick={() => {
-						handleCheckout();
 						checkoutMessage();
 						clearCart();
 					}}
