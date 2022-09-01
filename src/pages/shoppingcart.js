@@ -3,9 +3,8 @@ import Link from 'next/link';
 import SVG from '../../public/SVG/svg';
 import CartBanner from '../components/CartBanner';
 import ShoppingCart from '../components/CartList';
-import OrderForm from '../components/OrderForm';
 import Layout from '../components/Layout';
-
+import OrderForm from '../components/OrderForm';
 
 export default function ShoppingCartPage() {
 	return (
