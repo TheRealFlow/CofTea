@@ -1,14 +1,10 @@
 import styled from 'styled-components';
 
-const StyledCommentField = styled.fieldset`
+const StyledCommentField = styled.div`
 	display: inline-flex;
 	flex-direction: column;
-	justify-content: space-evenly;
 	width: 80vw;
 	margin: 0.5rem;
-	padding: 0.75rem;
-	border: 2px solid burlywood;
-	border-radius: 10px;
 	textarea {
 		height: 13vh;
 		padding: 0.5rem;
