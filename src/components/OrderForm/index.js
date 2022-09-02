@@ -1,33 +1,16 @@
-import Link from 'next/link';
+import {useRouter} from 'next/router';
 import {useState} from 'react';
 
 import useStore from '../../hooks/useStore';
+import StyledButton from '../Button/styled';
 import StyledCommentField from '../CommentField/styled';
-import StyledLink from '../Link/styled';
 import StyledOrderOptions from '../OrderOptions/styled';
 import StyledSelectTable from '../SelectTable/styled';
 
 import StyledOrderForm from './styled';
 
 export default function OrderForm() {
-	const [selectOrder, setSelectOrder] = useState(true);
-
-	function handleOrder() {
-		setSelectOrder(!selectOrder);
-	}
-
-	const [isHidden, setIsHidden] = useState(false);
-
-	function handleHidden() {
-		setIsHidden(!isHidden);
-	}
-
-	const [showCheckout, setShowCheckout] = useState(false);
-
-	function handleCheckout() {
-		setShowCheckout(disabled => !disabled);
-	}
-
+	const router = useRouter();
 	const [characterCount, setCharacterCount] = useState(0);
 
 	const calculate = event => {
@@ -43,53 +26,37 @@ export default function OrderForm() {
 		<StyledOrderForm>
 			<StyledOrderOptions>
 				<legend>Where do you want to drink?</legend>
-				<label htmlFor="Here">
+				<label htmlFor="here">
 					Here
-					<input
-						type="radio"
-						name="order"
-						id="here"
-						onClick={handleOrder}
-						disabled={!selectOrder}
-					/>
+					<input type="radio" name="order" id="here" />
 				</label>
 				<label htmlFor="togo">
 					To-Go
-					<input
-						type="radio"
-						name="order"
-						id="togo"
-						onClick={() => {
-							handleOrder(), handleCheckout(), handleHidden();
-						}}
-						disabled={!selectOrder}
-					/>
+					<input type="radio" name="order" id="togo" />
 				</label>
 			</StyledOrderOptions>
 
-			<StyledSelectTable
-				onClick={handleCheckout}
-				disabled={selectOrder}
-				variant={isHidden ? 'hidden' : ''}
-			>
-				<span>Select your table</span>
-				<select>
-					<option value="0">Select Table:</option>
-					<option onClick={handleCheckout}>Table 1</option>
-					<option onClick={handleCheckout}>Table 2</option>
-					<option onClick={handleCheckout}>Table 3</option>
-					<option onClick={handleCheckout}>Table 4</option>
-					<option onClick={handleCheckout}>Table 5</option>
-					<option onClick={handleCheckout}>Table 6</option>
-					<option onClick={handleCheckout}>Table 7</option>
-					<option onClick={handleCheckout}>Table 8</option>
-					<option onClick={handleCheckout}>Table 9</option>
-					<option onClick={handleCheckout}>Table 10</option>
-				</select>
+			<StyledSelectTable>
+				<label>
+					Select your table
+					<select>
+						<option>Select Table:</option>
+						<option>Table 1</option>
+						<option>Table 2</option>
+						<option>Table 3</option>
+						<option>Table 4</option>
+						<option>Table 5</option>
+						<option>Table 6</option>
+						<option>Table 7</option>
+						<option>Table 8</option>
+						<option>Table 9</option>
+						<option>Table 10</option>
+					</select>
+				</label>
 			</StyledSelectTable>
 
-			<StyledCommentField disabled={selectOrder}>
-				<legend>Comments to your order</legend>
+			<StyledCommentField>
+				<label>Comments to your Order</label>
 				<textarea
 					maxLength={100}
 					placeholder={'Coffee with milk, Tea with sugar, ...'}
@@ -98,17 +65,17 @@ export default function OrderForm() {
 				<span>{characterCount}/100</span>
 			</StyledCommentField>
 
-			<Link href="/" aria-label="Checkout Button">
-				<StyledLink
-					onClick={() => {
-						checkoutMessage();
-						clearCart();
-					}}
-					variant={!showCheckout ? 'checkout-disable' : ''}
-				>
-					Checkout
-				</StyledLink>
-			</Link>
+			<StyledButton
+				type="submit"
+				onClick={() => {
+					checkoutMessage();
+					clearCart();
+					router.push('/');
+				}}
+				variant="default"
+			>
+				Checkout
+			</StyledButton>
 		</StyledOrderForm>
 	);
 }
