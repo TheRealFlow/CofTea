@@ -5,7 +5,7 @@ import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
 import StyledCommentField from '../CommentField/styled';
 import StyledOrderOptions from '../OrderOptions/styled';
-import StyledSelectTable from '../SelectTable/styled';
+import SelectTable from '../SelectTable';
 
 import StyledOrderForm from './styled';
 
@@ -36,24 +36,7 @@ export default function OrderForm() {
 				</label>
 			</StyledOrderOptions>
 
-			<StyledSelectTable>
-				<label>
-					Select your table
-					<select>
-						<option>Select Table:</option>
-						<option>Table 1</option>
-						<option>Table 2</option>
-						<option>Table 3</option>
-						<option>Table 4</option>
-						<option>Table 5</option>
-						<option>Table 6</option>
-						<option>Table 7</option>
-						<option>Table 8</option>
-						<option>Table 9</option>
-						<option>Table 10</option>
-					</select>
-				</label>
-			</StyledSelectTable>
+			<SelectTable />
 
 			<StyledCommentField>
 				<label>Comments to your Order</label>
