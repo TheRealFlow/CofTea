@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const StyledOrderOptions = styled.fieldset`
-	display: inline-flex;
-	justify-content: space-evenly;
+const StyledOrderOptions = styled.div`
+	display: flex;
+	justify-content: center;
 	width: 80vw;
 	margin: 0.5rem;
 	padding: 0.75rem;
@@ -12,8 +12,8 @@ const StyledOrderOptions = styled.fieldset`
 		font-weight: bold;
 	}
 	input {
-		margin-left: 1rem;
-		transform: scale(1.3);
+		margin-left: 2rem;
+		transform: scale(1.5);
 	}
 `;
 

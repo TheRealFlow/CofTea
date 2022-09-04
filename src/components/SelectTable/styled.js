@@ -2,12 +2,17 @@ import styled, {css} from 'styled-components';
 
 const StyledSelectTable = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	width: 80vw;
 	margin: 0.5rem;
 	padding: 0.75rem;
 	border: 2px solid burlywood;
 	border-radius: 10px;
+	span {
+		margin-bottom: 1rem;
+		font-weight: bold;
+	}
 	label {
 		margin: 0 0.5rem;
 	}

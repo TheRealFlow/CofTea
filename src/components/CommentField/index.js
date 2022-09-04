@@ -10,7 +10,7 @@ export default function CommentField() {
 	};
 	return (
 		<StyledCommentField>
-			<label>Comments to your Order</label>
+			<label>Any extra wishes?</label>
 			<textarea
 				maxLength={100}
 				placeholder={'Coffee with milk, Tea with sugar, ...'}
