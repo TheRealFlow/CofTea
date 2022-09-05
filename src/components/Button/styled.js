@@ -11,26 +11,22 @@ const StyledButton = styled.button`
 			border: 1px solid black;
 			color: black;
 			background-color: none;
-
 			&:active {
 				color: white;
 				background-color: green;
 			}
 		`}
-
 	${({variant}) =>
 		variant === 'added' &&
 		css`
 			color: white;
 			background-color: green;
 		`}
-
     ${({variant}) =>
 		variant === 'delete' &&
 		css`
 			color: white;
 			background-color: red;
-
 			&:active {
 				color: black;
 				background-color: white;
