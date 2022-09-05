@@ -13,7 +13,7 @@ const StyledLink = styled.a`
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
 			border: 1px solid black;
-			color: white;
+			color: var(--accent-color);
 			background-color: grey;
 
 			&:active {
@@ -28,8 +28,8 @@ const StyledLink = styled.a`
 			margin: 0;
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
-			color: white;
-			background-color: brown;
+			color: var(--accent-color);
+			background-color: var(--secondary-color);
 
 			&:active {
 				color: black;
@@ -42,8 +42,8 @@ const StyledLink = styled.a`
 			margin: 0;
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
-			color: white;
-			background-color: olive;
+			color: var(--accent-color);
+			background-color: var(--primary-color);
 
 			&:active {
 				color: black;
@@ -53,7 +53,7 @@ const StyledLink = styled.a`
 		${({variant}) =>
 		variant === 'checkout' &&
 		css`
-			color: white;
+			color: var(--accent-color);
 			background-color: lightgreen;
 		`}
 
