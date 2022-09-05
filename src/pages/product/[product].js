@@ -14,7 +14,11 @@ export default function DetailsPage() {
 	const changeQuantity = useStore(state => state.changeQuantity);
 	const products = useStore(state => state.products);
 	const {query} = useRouter();
-
+	const convert = new Intl.NumberFormat('de-DE', {
+		style: 'currency',
+		currency: 'EUR',
+		minimumFractionDigits: 2,
+	});
 	return (
 		<StyledDetailPage>
 			{products
@@ -33,7 +37,7 @@ export default function DetailsPage() {
 							<StyledProductDescription>
 								{product.description}
 							</StyledProductDescription>
-							<StyledProductPrice>{product.price}</StyledProductPrice>
+							<StyledProductPrice>{convert.format(product.price)}</StyledProductPrice>
 							<StyledButton
 								variant="default"
 								onClick={() => {

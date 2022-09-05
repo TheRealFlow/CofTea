@@ -12,6 +12,11 @@ import StyledProductCard from './styled';
 
 export default function ProductCard({product}) {
 	const changeQuantity = useStore(state => state.changeQuantity);
+	const convert = new Intl.NumberFormat('de-DE', {
+		style: 'currency',
+		currency: 'EUR',
+		minimumFractionDigits: 2,
+	});
 	return (
 		<StyledProductCard category={product.category}>
 			<ImageWrapper>
@@ -24,7 +29,7 @@ export default function ProductCard({product}) {
 				/>
 			</ImageWrapper>
 			<StyledProductName>{product.name}</StyledProductName>
-			<StyledProductPrice>{product.price}</StyledProductPrice>
+			<StyledProductPrice>{convert.format(product.price)}</StyledProductPrice>
 			<Link href={`/product/${product.id}`} aria-label="Info Button">
 				<a>
 					<SVG size="30px" color="burlywood" variant="info" />
@@ -37,7 +42,7 @@ export default function ProductCard({product}) {
 					changeQuantity(product.id, 1);
 				}}
 			>
-				add to Cart
+				Add to Cart
 			</StyledButton>
 		</StyledProductCard>
 	);

@@ -12,7 +12,11 @@ import StyledCartItem from './styled';
 
 export default function CartItem({product}) {
 	const changeQuantity = useStore(state => state.changeQuantity);
-
+	const convert = new Intl.NumberFormat('de-DE', {
+		style: 'currency',
+		currency: 'EUR',
+		minimumFractionDigits: 2,
+	});
 	return (
 		<StyledCartItem>
 			<ImageWrapper>
@@ -25,7 +29,9 @@ export default function CartItem({product}) {
 				/>
 			</ImageWrapper>
 			<StyledProductName>{product.name}</StyledProductName>
-			<StyledProductPrice>{product.price * product.quantity}€</StyledProductPrice>
+			<StyledProductPrice>
+				{convert.format(product.price * product.quantity)}
+			</StyledProductPrice>
 			<StyledProductQuantity>{product.quantity}</StyledProductQuantity>
 			<StyledButton
 				type="button"

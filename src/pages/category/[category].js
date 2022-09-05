@@ -17,6 +17,11 @@ export default function Category() {
 	const changeQuantity = useStore(state => state.changeQuantity);
 	const products = useStore(state => state.products);
 	const {query} = useRouter();
+	const convert = new Intl.NumberFormat('de-DE', {
+		style: 'currency',
+		currency: 'EUR',
+		minimumFractionDigits: 2,
+	});
 	return (
 		<>
 			<Header />
@@ -37,7 +42,9 @@ export default function Category() {
 									/>
 								</ImageWrapper>
 								<StyledProductName>{product.name}</StyledProductName>
-								<StyledProductPrice>{product.price}</StyledProductPrice>
+								<StyledProductPrice>
+									{convert.format(product.price)}
+								</StyledProductPrice>
 								<Link href={`/product/${product.id}`} aria-label="Info Button">
 									<a>
 										<SVG size="30px" color="burlywood" variant="info" />
