@@ -40,8 +40,16 @@ const StyledButton = styled.button`
 			background-color: lightgreen;
 		`}
 		${({variant}) =>
-		variant === 'counter' &&
+		variant === 'plus-counter' &&
 		css`
+			grid-area: plus-counter;
+			background-color: transparent;
+			border: none;
+		`}
+		${({variant}) =>
+		variant === 'minus-counter' &&
+		css`
+			grid-area: minus-counter;
 			background-color: transparent;
 			border: none;
 		`}
