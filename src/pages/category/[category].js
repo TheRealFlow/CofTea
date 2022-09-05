@@ -6,6 +6,7 @@ import SVG from '../../../public/SVG/svg';
 import StyledButton from '../../components/Button/styled';
 import FilterBar from '../../components/FilterBar';
 import Header from '../../components/Header';
+import ImageWrapper from '../../components/ImageWrapper/styled';
 import StyledProductCard from '../../components/ProductCard/styled';
 import StyledProductList from '../../components/ProductList/styled';
 import StyledProductName from '../../components/ProductName/styled';
@@ -26,13 +27,15 @@ export default function Category() {
 					.map(product => {
 						return (
 							<StyledProductCard key={product.id} category={product.category}>
-								<Image
-									alt={product.alt}
-									src={product.imgUrl}
-									width={100}
-									height={100}
-									layout="fixed"
-								/>
+								<ImageWrapper>
+									<Image
+										alt={product.alt}
+										src={product.imgUrl}
+										width={100}
+										height={100}
+										layout="responsive"
+									/>
+								</ImageWrapper>
 								<StyledProductName>{product.name}</StyledProductName>
 								<StyledProductPrice>{product.price}</StyledProductPrice>
 								<Link href={`/product/${product.id}`} aria-label="Info Button">
@@ -46,7 +49,7 @@ export default function Category() {
 										changeQuantity(product.id, 1);
 									}}
 								>
-									Add To Cart
+									Add to Cart
 								</StyledButton>
 							</StyledProductCard>
 						);
