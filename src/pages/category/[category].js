@@ -17,7 +17,7 @@ export default function Category() {
 	const changeQuantity = useStore(state => state.changeQuantity);
 	const products = useStore(state => state.products);
 	const {query} = useRouter();
-	const convert = new Intl.NumberFormat('de-DE', {
+	const convert = Intl.NumberFormat('de-DE', {
 		style: 'currency',
 		currency: 'EUR',
 		minimumFractionDigits: 2,
