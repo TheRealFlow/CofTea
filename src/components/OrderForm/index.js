@@ -21,7 +21,11 @@ export default function OrderForm() {
 	const router = useRouter();
 	const clearCart = useStore(state => state.clearCart);
 	function checkoutMessage() {
-		alert('Thank you for your order. Your order-number is: 129');
+		alert(
+			'Thank you for your order.\n\nYour order-number is: ' +
+				Math.floor(Math.random() * 10) +
+				1
+		);
 	}
 	return (
 		<StyledOrderForm>
