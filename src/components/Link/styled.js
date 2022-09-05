@@ -2,9 +2,10 @@ import styled, {css} from 'styled-components';
 
 const StyledLink = styled.a`
 	margin: 0.5rem;
-	padding: 0.25rem 0.5rem;
+	padding: 0.4rem 1.3rem;
 	border-radius: 10px;
 	border: 1px solid black;
+	background-color: burlywood;
 	cursor: pointer;
 	${({variant}) =>
 		variant === 'all' &&
@@ -28,6 +29,7 @@ const StyledLink = styled.a`
 			margin: 0;
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
+			border: 1px solid black;
 			color: white;
 			background-color: brown;
 
@@ -42,6 +44,7 @@ const StyledLink = styled.a`
 			margin: 0;
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
+			border: 1px solid black;
 			color: white;
 			background-color: olive;
 
@@ -53,8 +56,21 @@ const StyledLink = styled.a`
 		${({variant}) =>
 		variant === 'checkout' &&
 		css`
-			color: white;
-			background-color: lightgreen;
+			margin: 0.5rem;
+			padding: 0.4rem 1.3rem;
+			border-radius: 10px;
+			background-color: burlywood;
+		`}
+		${({variant}) =>
+		variant === 'checkout-disable' &&
+		css`
+			margin: 0.5rem;
+			padding: 0.4rem 1.3rem;
+			border-radius: 10px;
+			border: 1px solid black;
+			background-color: lightgray;
+			opacity: 35%;
+			pointer-events: none;
 		`}
 
 		${({variant}) =>

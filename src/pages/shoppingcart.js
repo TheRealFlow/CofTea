@@ -3,16 +3,15 @@ import Link from 'next/link';
 import SVG from '../../public/SVG/svg';
 import CartBanner from '../components/CartBanner';
 import ShoppingCart from '../components/CartList';
-import CommentField from '../components/CommentField';
 import Layout from '../components/Layout';
-import StyledLink from '../components/Link/styled';
+import OrderForm from '../components/OrderForm';
 import useStore from '../hooks/useStore';
 
 export default function ShoppingCartPage() {
-	const checkoutMessage = () => {
-		alert('Your order has been successfully processed');
-	};
-	const clearCart = useStore(state => state.clearCart);
+	const products = useStore(state => state.products);
+
+	const shoppingCartItems = products.filter(product => product.quantity > 0);
+
 	return (
 		<Layout>
 			<Link href="/" aria-label="Back Arrow">
@@ -21,19 +20,12 @@ export default function ShoppingCartPage() {
 				</a>
 			</Link>
 			<CartBanner />
-			<ShoppingCart />
-			<CommentField />
-			<Link href="/" aria-label="Checkout Button">
-				<StyledLink
-					onClick={() => {
-						checkoutMessage();
-						clearCart();
-					}}
-					variant="checkout"
-				>
-					Checkout
-				</StyledLink>
-			</Link>
+			<ShoppingCart shoppingCartItems={shoppingCartItems} />
+			{shoppingCartItems.length ? (
+				<OrderForm />
+			) : (
+				<span>Please put something in the Shopping Cart first</span>
+			)}
 		</Layout>
 	);
 }

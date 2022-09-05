@@ -1,22 +1,20 @@
 import styled from 'styled-components';
 
 const StyledCommentField = styled.div`
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
-	p {
-		margin: 0 1rem;
-		font-size: 0.9rem;
-		font-weight: bold;
-	}
+	width: 80vw;
+	margin: 0.5rem;
 	textarea {
-		max-width: 90%;
-		margin-left: 1rem;
+		height: 13vh;
+		padding: 0.5rem;
 		border: 2px solid burlywood;
+		border-radius: 10px;
 		font-size: 0.75rem;
 	}
 	span {
-		margin-left: 20rem;
 		font-size: 0.75rem;
+		text-align: right;
 	}
 `;
 
