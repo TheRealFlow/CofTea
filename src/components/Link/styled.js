@@ -5,7 +5,6 @@ const StyledLink = styled.a`
 	padding: 0.4rem 1.3rem;
 	border-radius: 10px;
 	border: 1px solid black;
-	background-color: burlywood;
 	cursor: pointer;
 	${({variant}) =>
 		variant === 'all' &&

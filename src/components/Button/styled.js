@@ -8,6 +8,7 @@ const StyledButton = styled.button`
 	${({variant}) =>
 		variant === 'default' &&
 		css`
+			grid-area: button;
 			border: 1px solid black;
 			color: black;
 			background-color: none;
