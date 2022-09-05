@@ -4,6 +4,7 @@ import Link from 'next/link';
 import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
+import ImageWrapper from '../ImageWrapper/styled';
 import StyledProductName from '../ProductName/styled';
 import StyledProductPrice from '../ProductPrice/styled';
 
@@ -13,7 +14,15 @@ export default function ProductCard({product}) {
 	const changeQuantity = useStore(state => state.changeQuantity);
 	return (
 		<StyledProductCard category={product.category}>
-			<Image alt={product.alt} src={product.imgUrl} width={100} height={100} layout="fixed" />
+			<ImageWrapper>
+				<Image
+					alt={product.alt}
+					src={product.imgUrl}
+					width={100}
+					height={100}
+					layout="responsive"
+				/>
+			</ImageWrapper>
 			<StyledProductName>{product.name}</StyledProductName>
 			<StyledProductPrice>{product.price}</StyledProductPrice>
 			<Link href={`/product/${product.id}`} aria-label="Info Button">
