@@ -25,9 +25,10 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
+		height: 100vh;
 		margin: 0;
+		background-attachment: fixed;
 		background-image: url('./../background-image.jpg');
-		background-repeat: no-repeat;
 		font-size: 1rem;
 	}
 	:root{
