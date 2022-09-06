@@ -1,12 +1,18 @@
 import styled, {css} from 'styled-components';
 
 const StyledSpan = styled.span`
-	width: 80vw;
-	margin: 0.5rem;
-	padding: 0.75rem;
-	border: 2px solid burlywood;
-	border-radius: 10px;
-	font-weight: bold;
+	color: var(--accent-color);
+	${({variant}) =>
+		variant === 'show' &&
+		css`
+			width: 90vw;
+			margin: 0.5rem;
+			padding: 0.75rem;
+			border: 2px solid burlywood;
+			border-radius: 10px;
+			font-size: 1.1rem;
+			letter-spacing: 0.1rem;
+		`}
 	${({variant}) =>
 		variant === 'hidden' &&
 		css`
@@ -16,7 +22,6 @@ const StyledSpan = styled.span`
 		variant === 'cart-counter' &&
 		css`
 			padding: 0.6rem;
-			color: var(--accent-color);
 			font-weight: bold;
 		`}
 	${({variant}) =>
@@ -31,6 +36,12 @@ const StyledSpan = styled.span`
 			background-color: lightsteelblue;
 			border-radius: 50%;
 			text-align: center;
+		`}
+	${({variant}) =>
+		variant === 'comment-counter' &&
+		css`
+			letter-spacing: 0.1rem;
+			text-align: right;
 		`}
 `;
 
