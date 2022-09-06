@@ -9,14 +9,12 @@ const StyledCartBanner = styled.div`
 	justify-content: center;
 	width: 100vw;
 	margin-bottom: 1rem;
-	padding: 0.6rem;
 	animation: drop-in 500ms;
 	animation-name: drop-in;
-	border-top: 10px solid burlywood;
-	border-radius: 8px;
+	border-top: 10px solid var(--secondary-color);
+	border-radius: 10px;
+	opacity: 0.95;
 	background-color: var(--primary-color);
-	box-shadow: rgba(0, 0, 0, 0.45) 0 55px 10px -40px;
-
 	@keyframes drop-in {
 		from {
 			transform: rotate(0deg) translateY(-90%);

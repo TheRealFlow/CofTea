@@ -24,7 +24,7 @@ export default function Header() {
 				<>
 					<Link href="/" aria-label="Home Page">
 						<a>
-							<SVG size="45px" color="burlywood" variant="home" />
+							<SVG size="45px" color="var(--secondary-color)" variant="home" />
 						</a>
 					</Link>
 

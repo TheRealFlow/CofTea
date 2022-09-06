@@ -12,6 +12,7 @@ const StyledFilterBar = styled.section`
 	padding: 0.5rem;
 	border-top: 1px solid var(--accent-color);
 	border-bottom: 1px solid var(--accent-color);
+	opacity: 0.95;
 	background-color: var(--secondary-color);
 `;
 
