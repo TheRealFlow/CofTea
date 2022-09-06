@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 const StyledCartBanner = styled.div`
 	display: flex;
-	justify-content: space-around;
-	margin: 0.8rem;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	margin-bottom: 1rem;
 	padding: 0.6rem;
 	animation: drop-in 500ms;
 	animation-name: drop-in;
 	border-top: 10px solid burlywood;
-	border-radius: 8px;
+	border-radius: 10px;
 	background-color: lightslategray;
 	box-shadow: rgba(0, 0, 0, 0.45) 0 55px 10px -40px;
 
