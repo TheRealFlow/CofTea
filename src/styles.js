@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		background-image: url('./../background-image.jpg');
+		background-size: cover;
 		font-size: 1rem;
 	}
 	:root{
