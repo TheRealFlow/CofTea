@@ -5,7 +5,9 @@ const StyledHeader = styled.header`
 	align-items: center;
 	justify-content: space-evenly;
 	padding: 0.5rem;
+
 	h1 {
+		color: var(--accent-color);
 		font-size: xx-large;
 	}
 `;

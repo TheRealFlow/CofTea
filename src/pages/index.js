@@ -12,7 +12,7 @@ export default function HomePage() {
 				<meta key="description" name="description" content="This is our capstone-project" />
 			</Head>
 			<FilterBar />
-			<ProductList />;
+			<ProductList />
 		</Layout>
 	);
 }
