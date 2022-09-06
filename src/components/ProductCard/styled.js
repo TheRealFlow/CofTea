@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledProductCard = styled.li`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	width: 90%;
 	margin: 0.5rem;
