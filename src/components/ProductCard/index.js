@@ -15,7 +15,7 @@ export default function ProductCard({product}) {
 		<StyledProductCard category={product.category}>
 			<Image alt={product.alt} src={product.imgUrl} width={100} height={100} layout="fixed" />
 			<StyledProductName>{product.name}</StyledProductName>
-			<StyledProductPrice>{product.price}€</StyledProductPrice>
+			<StyledProductPrice>{product.price}</StyledProductPrice>
 			<Link href={`/product/${product.id}`} aria-label="Info Button">
 				<a>
 					<SVG size="30px" color="burlywood" variant="info" />
