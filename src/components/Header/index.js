@@ -39,7 +39,7 @@ export default function Header() {
 
 					<Link href="/shoppingcart" aria-label="Shopping Cart">
 						<StyledLink variant="counterHome">
-							<SVG size="40px" color="burlywood" variant="cart" />
+							<SVG size="45px" color="var(--secondary-color)" variant="cart" />
 							<StyledSpan variant="badge-counter">{totalQuantity}</StyledSpan>
 						</StyledLink>
 					</Link>

@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
 	z-index: 100;
 	top: 0;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	width: 100vw;
 	padding: 0.5rem;
 	background-image: url('./../background-image.jpg');

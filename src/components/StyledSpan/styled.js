@@ -28,14 +28,14 @@ const StyledSpan = styled.span`
 		variant === 'badge-counter' &&
 		css`
 			display: inline-block;
-			margin: 0;
-			padding: 0;
+			margin: -1rem;
 			width: 20px;
 			line-height: 20px;
-			font-size: small;
-			background-color: lightsteelblue;
+			color: var(--accent-color);
+			background-color: var(--secondary-color);
 			border-radius: 50%;
 			text-align: center;
+			border: 1px solid var(--accent-color);
 		`}
 	${({variant}) =>
 		variant === 'comment-counter' &&
@@ -47,7 +47,7 @@ const StyledSpan = styled.span`
 		variant === 'cof' &&
 		css`
 			letter-spacing: 0.1rem;
-			color: var(--primary-color);
+			color: var(--secondary-color);
 			font-size: 2rem;
 			font-weight: bold;
 		`}
@@ -55,7 +55,7 @@ const StyledSpan = styled.span`
 		variant === 'tea' &&
 		css`
 			letter-spacing: 0.1rem;
-			color: var(--secondary-color);
+			color: var(--primary-color);
 			font-size: 2rem;
 			font-weight: bold;
 		`}
