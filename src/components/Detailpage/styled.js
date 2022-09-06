@@ -8,7 +8,7 @@ const StyledDetailPage = styled.div`
 	height: 100vh;
 	margin: 0;
 	padding: 0;
-	background-color: darkgrey;
+	background-color: transparent;
 	list-style: none;
 	img {
 		border-bottom-right-radius: 20px;

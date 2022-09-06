@@ -10,8 +10,8 @@ const StyledCartBanner = styled.div`
 	animation: drop-in 500ms;
 	animation-name: drop-in;
 	border-top: 10px solid burlywood;
-	border-radius: 10px;
-	background-color: lightslategray;
+	border-radius: 8px;
+	background-color: var(--primary-color);
 	box-shadow: rgba(0, 0, 0, 0.45) 0 55px 10px -40px;
 
 	@keyframes drop-in {

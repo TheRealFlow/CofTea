@@ -13,7 +13,7 @@ const StyledLink = styled.a`
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
 			border: 1px solid black;
-			color: white;
+			color: var(--accent-color);
 			background-color: grey;
 
 			&:active {
@@ -28,24 +28,22 @@ const StyledLink = styled.a`
 			margin: 0;
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
-			border: 1px solid black;
-			color: white;
-			background-color: brown;
+			color: var(--accent-color);
+			background-color: var(--secondary-color);
 
 			&:active {
 				color: black;
 				background-color: lightgray;
 		`}
-
+    
     ${({variant}) =>
 		variant === 'tea' &&
 		css`
 			margin: 0;
 			padding: 0.25rem 1.5rem;
 			font-size: 0.65rem;
-			border: 1px solid black;
-			color: white;
-			background-color: olive;
+			color: var(--accent-color);
+			background-color: var(--primary-color);
 
 			&:active {
 				color: black;
@@ -55,21 +53,8 @@ const StyledLink = styled.a`
 		${({variant}) =>
 		variant === 'checkout' &&
 		css`
-			margin: 0.5rem;
-			padding: 0.4rem 1.3rem;
-			border-radius: 10px;
-			background-color: burlywood;
-		`}
-		${({variant}) =>
-		variant === 'checkout-disable' &&
-		css`
-			margin: 0.5rem;
-			padding: 0.4rem 1.3rem;
-			border-radius: 10px;
-			border: 1px solid black;
-			background-color: lightgray;
-			opacity: 35%;
-			pointer-events: none;
+			color: var(--accent-color);
+			background-color: lightgreen;
 		`}
 
 		${({variant}) =>
