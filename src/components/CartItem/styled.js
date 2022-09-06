@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const StyledCartItem = styled.li`
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-areas:
+		'image name name price'
+		'image plus-counter quantity minus-counter';
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
 	align-items: center;
-	width: 90%;
+	width: 97%;
 	margin: 0.5rem;
 	padding: 0.5rem;
 	border-bottom: 2px solid var(--accent-color);

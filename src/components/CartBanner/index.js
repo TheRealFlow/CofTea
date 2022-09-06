@@ -1,4 +1,3 @@
-import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledCartCounter from '../CartCounter/styled';
 import StyledCartTag from '../CartTag/styled';
@@ -6,6 +5,11 @@ import StyledCartTag from '../CartTag/styled';
 import StyledCartBanner from './styled';
 
 export default function CartBanner() {
+	const convert = Intl.NumberFormat('de-DE', {
+		style: 'currency',
+		currency: 'EUR',
+		minimumFractionDigits: 2,
+	});
 	const products = useStore(state => state.products);
 	const initialValue = 0;
 	const totalPrice = products.reduce(
@@ -19,12 +23,10 @@ export default function CartBanner() {
 	return (
 		<StyledCartBanner>
 			<StyledCartTag>
-				<StyledCartCounter>{totalPrice} </StyledCartCounter>
-				<SVG size="30px" color="black" variant="totalPrice" />
+				<StyledCartCounter>Total: {convert.format(totalPrice)}</StyledCartCounter>
 			</StyledCartTag>
 			<StyledCartTag>
-				<StyledCartCounter>{totalQuantity}</StyledCartCounter>
-				<SVG size="30px" color="black" variant="cart" />
+				<StyledCartCounter>Quantity: {totalQuantity}</StyledCartCounter>
 			</StyledCartTag>
 		</StyledCartBanner>
 	);
