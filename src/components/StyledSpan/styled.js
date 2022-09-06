@@ -43,6 +43,34 @@ const StyledSpan = styled.span`
 			letter-spacing: 0.1rem;
 			text-align: right;
 		`}
+	${({variant}) =>
+		variant === 'cof' &&
+		css`
+			letter-spacing: 0.1rem;
+			color: var(--primary-color);
+			font-size: 2rem;
+			font-weight: bold;
+		`}
+	${({variant}) =>
+		variant === 'tea' &&
+		css`
+			letter-spacing: 0.1rem;
+			color: var(--secondary-color);
+			font-size: 2rem;
+			font-weight: bold;
+		`}
+	${({variant}) =>
+		variant === 'empty-cart' &&
+		css`
+			position: fixed;
+			top: 14rem;
+			margin: 0.5rem;
+			color: var(--accent-color);
+			font-size: 1.2rem;
+			font-weight: bold;
+			letter-spacing: 0.1rem;
+			text-align: center;
+		`}
 `;
 
 export default StyledSpan;

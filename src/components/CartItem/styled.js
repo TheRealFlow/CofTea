@@ -9,7 +9,7 @@ const StyledCartItem = styled.li`
 	grid-template-rows: repeat(2, 1fr);
 	align-items: center;
 	width: 97%;
-	margin: 0.5rem;
+	margin: 0.35rem;
 	padding: 0.5rem;
 	border-bottom: 2px solid var(--accent-color);
 	border-radius: 10px;

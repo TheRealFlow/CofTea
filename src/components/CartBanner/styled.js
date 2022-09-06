@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const StyledCartBanner = styled.div`
 	display: flex;
+	position: fixed;
+	z-index: 100;
+	top: 5.5rem;
 	align-items: center;
 	justify-content: center;
 	width: 100vw;

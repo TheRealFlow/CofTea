@@ -1,10 +1,8 @@
-import Link from 'next/link';
-
-import SVG from '../../public/SVG/svg';
 import CartBanner from '../components/CartBanner';
 import ShoppingCart from '../components/CartList';
 import Layout from '../components/Layout';
 import OrderForm from '../components/OrderForm';
+import StyledSpan from '../components/StyledSpan/styled';
 import useStore from '../hooks/useStore';
 
 export default function ShoppingCartPage() {
@@ -14,17 +12,14 @@ export default function ShoppingCartPage() {
 
 	return (
 		<Layout>
-			<Link href="/" aria-label="Back Arrow">
-				<a>
-					<SVG size="40px" color="black" variant="backArrow" />
-				</a>
-			</Link>
 			<CartBanner />
 			<ShoppingCart shoppingCartItems={shoppingCartItems} />
 			{shoppingCartItems.length ? (
 				<OrderForm />
 			) : (
-				<span>Please put something in the Shopping Cart first</span>
+				<StyledSpan variant="empty-cart">
+					Please put something in the Shopping Cart first
+				</StyledSpan>
 			)}
 		</Layout>
 	);

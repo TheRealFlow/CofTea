@@ -5,6 +5,7 @@ import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
 import StyledLink from '../Link/styled';
 import StyledSpan from '../StyledSpan/styled';
+import TextWrapper from '../TextWrapper/styled';
 
 import StyledHeader from './styled';
 
@@ -31,7 +32,10 @@ export default function Header() {
 				</>
 			) : (
 				<>
-					<h1>COFTEA</h1>
+					<TextWrapper>
+						<StyledSpan variant="cof">COF</StyledSpan>
+						<StyledSpan variant="tea">TEA</StyledSpan>
+					</TextWrapper>
 
 					<Link href="/shoppingcart" aria-label="Shopping Cart">
 						<StyledLink variant="counterHome">

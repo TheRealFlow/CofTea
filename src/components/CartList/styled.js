@@ -4,7 +4,7 @@ const StyledCartList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0;
+	margin-top: 12.5rem;
 	padding: 0;
 	list-style: none;
 `;
