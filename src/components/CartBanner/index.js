@@ -1,6 +1,6 @@
 import useStore from '../../hooks/useStore';
-import StyledCartCounter from '../CartCounter/styled';
 import StyledCartTag from '../CartTag/styled';
+import StyledSpan from '../StyledSpan/styled';
 
 import StyledCartBanner from './styled';
 
@@ -23,10 +23,10 @@ export default function CartBanner() {
 	return (
 		<StyledCartBanner>
 			<StyledCartTag>
-				<StyledCartCounter>Total: {convert.format(totalPrice)}</StyledCartCounter>
+				<StyledSpan variant="cart-counter">Total: {convert.format(totalPrice)}</StyledSpan>
 			</StyledCartTag>
 			<StyledCartTag>
-				<StyledCartCounter>Quantity: {totalQuantity}</StyledCartCounter>
+				<StyledSpan variant="cart-counter">Quantity: {totalQuantity}</StyledSpan>
 			</StyledCartTag>
 		</StyledCartBanner>
 	);
