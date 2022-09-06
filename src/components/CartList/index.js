@@ -1,18 +1,13 @@
-import useStore from '../../hooks/useStore';
 import CartItem from '../CartItem';
 
 import StyledCartList from './styled';
 
-function ShoppingCart() {
-	const products = useStore(state => state.products);
-
+function ShoppingCart({shoppingCartItems}) {
 	return (
 		<StyledCartList>
-			{products
-				.filter(product => product.quantity > 0)
-				.map(product => {
-					return <CartItem key={product.id} product={product} />;
-				})}
+			{shoppingCartItems.map(product => {
+				return <CartItem key={product.id} product={product} />;
+			})}
 		</StyledCartList>
 	);
 }

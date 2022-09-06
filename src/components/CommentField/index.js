@@ -1,6 +1,7 @@
 import {useState} from 'react';
 
 import StyledCommentField from './styled';
+
 export default function CommentField() {
 	const [characterCount, setCharacterCount] = useState(0);
 
@@ -9,10 +10,9 @@ export default function CommentField() {
 	};
 	return (
 		<StyledCommentField>
-			<p>Comments to your order</p>
+			<label>Any extra wishes?</label>
 			<textarea
 				maxLength={100}
-				rows={4}
 				placeholder={'Coffee with milk, Tea with sugar, ...'}
 				onChange={calculate}
 			/>
