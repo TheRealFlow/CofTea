@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
 	align-items: center;
 	justify-content: space-around;
 	width: 100vw;
-	padding: 0.5rem;
+	padding: 0.75rem;
 	background-image: url('./../background-image.jpg');
 	h1 {
 		color: var(--accent-color);

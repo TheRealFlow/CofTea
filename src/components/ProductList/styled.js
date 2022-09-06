@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledProductList = styled.ul`
 	display: flex;
 	position: relative;
-	top: 7rem;
+	top: 8rem;
 	flex-direction: column;
 	align-items: center;
 	margin: 0;

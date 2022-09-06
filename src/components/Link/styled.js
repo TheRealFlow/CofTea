@@ -10,12 +10,12 @@ const StyledLink = styled.a`
 		variant === 'all' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1.5rem;
-			font-size: 0.65rem;
+			padding: 0.25rem 1rem;
+			width: 6rem;
 			border: 1px solid black;
 			color: var(--accent-color);
 			background-color: grey;
-
+			text-align: center;
 			&:active {
 				color: black;
 				background-color: lightgray;
@@ -26,25 +26,25 @@ const StyledLink = styled.a`
 		variant === 'coffee' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1.5rem;
-			font-size: 0.65rem;
+			padding: 0.25rem 1rem;
+			width: 6rem;
 			color: var(--accent-color);
 			background-color: var(--secondary-color);
-
+			text-align: center;
 			&:active {
 				color: black;
 				background-color: lightgray;
 		`}
-    
+
     ${({variant}) =>
 		variant === 'tea' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1.5rem;
-			font-size: 0.65rem;
+			padding: 0.25rem 1rem;
+			width: 6rem;
 			color: var(--accent-color);
 			background-color: var(--primary-color);
-
+			text-align: center;
 			&:active {
 				color: black;
 				background-color: lightgray;
