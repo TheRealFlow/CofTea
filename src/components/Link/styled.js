@@ -17,7 +17,7 @@ const StyledLink = styled.a`
 			text-align: center;
 			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.15);
 			&:active {
-				color: lightgray;
+				color: var(--accent-color);
 				background-color: var(--font-color);
 			}
 		`}
@@ -33,7 +33,7 @@ const StyledLink = styled.a`
 			text-align: center;
 			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.15);
 			&:active {
-				color: var(--secondary-color);
+				color: var(--accent-color);
 				background-color: var(--font-color);
 		`}
 
@@ -49,7 +49,7 @@ const StyledLink = styled.a`
 			text-align: center;
 			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.15);
 			&:active {
-				color: var(--primary-color);
+				color: var(--accent-color);
 				background-color: var(--font-color);
 			}
 		`}
@@ -65,7 +65,7 @@ const StyledLink = styled.a`
 		background-color: var(--accent-color);
 		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 		&:active {
-				color: var(--secondary-color);
+				color: var(--accent-color);
 				background-color: var(--font-color);
 		`}
 	${({variant}) =>
