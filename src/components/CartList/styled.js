@@ -6,7 +6,16 @@ const StyledCartList = styled.ul`
 	align-items: center;
 	margin-top: 8rem;
 	padding: 0;
+	animation: slide-in 650ms ease-out;
 	list-style: none;
+	@keyframes slide-in {
+		0% {
+			transform: translateY(100%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
 `;
 
 export default StyledCartList;
