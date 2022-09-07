@@ -7,12 +7,12 @@ const StyledSelectTable = styled.div`
 	width: 90vw;
 	margin: 0.5rem;
 	padding: 0.75rem;
-	border: 2px solid var(--accent-color);
+	border: 1px solid var(--accent-color);
 	border-radius: 10px;
 	select {
 		width: 8rem;
 		height: 2rem;
-		margin-left: 0.5rem;
+		margin-left: 1rem;
 		border: none;
 		border-radius: 10px;
 		background-color: var(--accent-color);

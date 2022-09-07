@@ -8,7 +8,7 @@ const StyledSpan = styled.span`
 			width: 90vw;
 			margin: 0.5rem;
 			padding: 0.75rem;
-			border: 2px solid var(--accent-color);
+			border: 1px solid var(--accent-color);
 			border-radius: 10px;
 			font-size: 1.1rem;
 			text-align: center;
@@ -78,8 +78,7 @@ const StyledSpan = styled.span`
 		variant === 'select' &&
 		css`
 			margin-bottom: 1rem;
-			font-size: 1rem;
-			font-weight: bold;
+			font-size: 1.1rem;
 			text-align: center;
 		`}
 `;
