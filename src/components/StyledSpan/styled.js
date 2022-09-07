@@ -53,9 +53,7 @@ const StyledSpan = styled.span`
 			color: var(--secondary-color);
 			font-size: 2.5rem;
 			font-weight: bold;
-			text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
-			background-color: var(--primary-color);
-			border-top-left-radius: 10px;
+			text-shadow: 0 1px 25px var(--primary-color);
 		`}
 	${({variant}) =>
 		variant === 'tea' &&
@@ -65,9 +63,7 @@ const StyledSpan = styled.span`
 			color: var(--primary-color);
 			font-size: 2.5rem;
 			font-weight: bold;
-			text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
-			background-color: var(--secondary-color);
-			border-bottom-right-radius: 10px;
+			text-shadow: 0 1px 25px var(--secondary-color);
 		`}
 	${({variant}) =>
 		variant === 'empty-cart' &&
