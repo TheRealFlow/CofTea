@@ -6,7 +6,7 @@ const StyledCartList = styled.ul`
 	align-items: center;
 	margin-top: 8rem;
 	padding: 0;
-	animation: slide-in 650ms ease-out;
+	animation: slide-in 500ms ease-out;
 	list-style: none;
 	@keyframes slide-in {
 		0% {
