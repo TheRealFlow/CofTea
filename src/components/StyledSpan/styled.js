@@ -61,7 +61,7 @@ const StyledSpan = styled.span`
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: 1.1rem;
+			font-size: 1.25rem;
 			font-weight: bold;
 			text-align: center;
 		`}
