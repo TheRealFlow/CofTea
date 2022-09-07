@@ -34,7 +34,7 @@ const StyledSpan = styled.span`
 			width: 1.25rem;
 			font-size: 0.8rem;
 			color: var(--font-color);
-			background-color: var(--primary-color);
+			background-color: var(--secondary-color);
 			border-radius: 50%;
 			text-align: center;
 			border: 1px solid var(--font-color);
@@ -46,24 +46,13 @@ const StyledSpan = styled.span`
 			text-align: right;
 		`}
 	${({variant}) =>
-		variant === 'cof' &&
+		variant === 'coftea' &&
 		css`
 			padding-left: 0.6rem;
-			letter-spacing: 0.1rem;
-			color: var(--secondary-color);
-			font-size: 2.5rem;
-			font-weight: bold;
-			text-shadow: 0 1px 25px var(--primary-color);
-		`}
-	${({variant}) =>
-		variant === 'tea' &&
-		css`
-			padding-right: 0.6rem;
-			letter-spacing: 0.1rem;
 			color: var(--primary-color);
 			font-size: 2.5rem;
 			font-weight: bold;
-			text-shadow: 0 1px 25px var(--secondary-color);
+			text-decoration: underline var(--secondary-color);
 		`}
 	${({variant}) =>
 		variant === 'empty-cart' &&
@@ -72,7 +61,7 @@ const StyledSpan = styled.span`
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			font-size: 1rem;
+			font-size: 1.1rem;
 			font-weight: bold;
 			text-align: center;
 		`}

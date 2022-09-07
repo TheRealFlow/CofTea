@@ -4,7 +4,6 @@ const StyledLink = styled.a`
 	margin: 0.5rem;
 	padding: 0.4rem 1.3rem;
 	border-radius: 10px;
-	border: 1px solid black;
 	cursor: pointer;
 	${({variant}) =>
 		variant === 'all' &&
@@ -16,7 +15,7 @@ const StyledLink = styled.a`
 			color: var(--font-color);
 			background-color: var(--accent-color);
 			text-align: center;
-			box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
+			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.25);
 			&:active {
 				color: lightgray;
 				background-color: var(--font-color);
@@ -30,9 +29,9 @@ const StyledLink = styled.a`
 			width: 6rem;
 			font-size: 0.9rem;
 			color: var(--font-color);
-			background-color: var(--secondary-color);
+			background-color: var(--accent-color);
 			text-align: center;
-			box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
+			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.25);
 			&:active {
 				color: var(--secondary-color);
 				background-color: var(--font-color);
@@ -46,9 +45,9 @@ const StyledLink = styled.a`
 			width: 6rem;
 			font-size: 0.9rem;
 			color: var(--font-color);
-			background-color: var(--primary-color);
+			background-color: var(--accent-color);
 			text-align: center;
-			box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
+			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.25);
 			&:active {
 				color: var(--primary-color);
 				background-color: var(--font-color);

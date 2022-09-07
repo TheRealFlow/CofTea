@@ -33,13 +33,12 @@ export default function Header() {
 			) : (
 				<>
 					<TextWrapper>
-						<StyledSpan variant="cof">COF</StyledSpan>
-						<StyledSpan variant="tea">TEA</StyledSpan>
+						<StyledSpan variant="coftea">COFTEA</StyledSpan>
 					</TextWrapper>
 
 					<Link href="/shoppingcart" aria-label="Shopping Cart">
 						<StyledLink variant="counterHome">
-							<SVG size="45px" color="var(--secondary-color)" variant="cart" />
+							<SVG size="45px" color="var(--primary-color)" variant="cart" />
 							<StyledSpan variant="badge-counter">{totalQuantity}</StyledSpan>
 						</StyledLink>
 					</Link>
