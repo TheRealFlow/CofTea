@@ -4,7 +4,7 @@ const StyledButton = styled.button`
 	margin: 0.5rem;
 	padding: 0.5rem 0.5rem;
 	border-radius: 10px;
-	background-color: var(--accent-color);
+	background-color: var(--primary-color);
 	color: var(--font-color);
 	cursor: pointer;
 	${({variant}) =>
@@ -13,7 +13,7 @@ const StyledButton = styled.button`
 			grid-area: button;
 			border: none;
 			font-weight: 500;
-			box-shadow: 2px 2px 10px black;
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 			&:active {
 				color: var(--accent-color);
 				background-color: var(--font-color);
@@ -27,7 +27,7 @@ const StyledButton = styled.button`
 			border: none;
 			font-size: 1rem;
 			font-weight: 500;
-			box-shadow: 2px 2px 10px black;
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 			&:active {
 				color: var(--accent-color);
 				background-color: var(--font-color);

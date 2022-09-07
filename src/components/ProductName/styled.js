@@ -4,7 +4,7 @@ const StyledProductName = styled.h2`
 	grid-area: name;
 	margin: 0.25rem;
 	color: var(--accent-color);
-	font-size: 1.25rem;
+	font-size: 1.3rem;
 	${({variant}) =>
 		variant === 'detail-name' &&
 		css`
