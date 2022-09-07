@@ -12,9 +12,8 @@ const StyledProductCard = styled.li`
 	width: 97%;
 	margin: 0.35rem;
 	padding: 0.25rem;
-	border: 2px solid var(--accent-color);
 	border-radius: 10px;
-	background-color: #ffecd1;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 	text-align: center;
 	img {
 		border-radius: 10px;
