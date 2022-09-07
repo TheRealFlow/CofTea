@@ -13,11 +13,10 @@ const StyledLink = styled.a`
 			padding: 0.2rem 1rem;
 			width: 6.5rem;
 			font-size: 0.9rem;
-			border: 1px solid black;
 			color: var(--font-color);
-			background-color: grey;
+			background-color: var(--accent-color);
 			text-align: center;
-			box-shadow: 2px 2px 5px black;
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
 			&:active {
 				color: lightgray;
 				background-color: var(--font-color);
@@ -33,7 +32,7 @@ const StyledLink = styled.a`
 			color: var(--font-color);
 			background-color: var(--secondary-color);
 			text-align: center;
-			box-shadow: 2px 2px 5px black;
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
 			&:active {
 				color: var(--secondary-color);
 				background-color: var(--font-color);
@@ -49,7 +48,7 @@ const StyledLink = styled.a`
 			color: var(--font-color);
 			background-color: var(--primary-color);
 			text-align: center;
-			box-shadow: 2px 2px 5px black;
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
 			&:active {
 				color: var(--primary-color);
 				background-color: var(--font-color);
