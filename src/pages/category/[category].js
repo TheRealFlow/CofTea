@@ -47,7 +47,7 @@ export default function Category() {
 								</StyledProductPrice>
 								<Link href={`/product/${product.id}`} aria-label="Info Button">
 									<a>
-										<SVG size="30px" color="burlywood" variant="info" />
+										<SVG size="30px" color="#262626" variant="info" />
 									</a>
 								</Link>
 								<StyledButton

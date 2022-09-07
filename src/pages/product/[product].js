@@ -33,13 +33,17 @@ export default function DetailsPage() {
 								width={400}
 								height={350}
 							/>
-							<StyledProductName>{product.name}</StyledProductName>
+							<StyledProductName variant="detail-name">
+								{product.name}
+							</StyledProductName>
 							<StyledProductDescription>
 								{product.description}
 							</StyledProductDescription>
-							<StyledProductPrice>{convert.format(product.price)}</StyledProductPrice>
+							<StyledProductPrice variant="detail-price">
+								{convert.format(product.price)}
+							</StyledProductPrice>
 							<StyledButton
-								variant="default"
+								variant="detail"
 								onClick={() => {
 									changeQuantity(product.id, 1);
 								}}

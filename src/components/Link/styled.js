@@ -10,69 +10,66 @@ const StyledLink = styled.a`
 		variant === 'all' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1rem;
-			width: 6rem;
+			padding: 0.2rem 1rem;
+			width: 6.5rem;
+			font-size: 0.9rem;
 			border: 1px solid black;
-			color: var(--accent-color);
+			color: var(--font-color);
 			background-color: grey;
 			text-align: center;
+			box-shadow: 2px 2px 5px black;
 			&:active {
-				color: black;
-				background-color: lightgray;
+				color: lightgray;
+				background-color: var(--font-color);
 			}
 		`}
-
 	${({variant}) =>
 		variant === 'coffee' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1rem;
+			padding: 0.2rem 1rem;
 			width: 6rem;
-			color: var(--accent-color);
+			font-size: 0.9rem;
+			color: var(--font-color);
 			background-color: var(--secondary-color);
 			text-align: center;
+			box-shadow: 2px 2px 5px black;
 			&:active {
-				color: black;
-				background-color: lightgray;
+				color: var(--secondary-color);
+				background-color: var(--font-color);
 		`}
 
     ${({variant}) =>
 		variant === 'tea' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1rem;
+			padding: 0.2rem 1rem;
 			width: 6rem;
-			color: var(--accent-color);
+			font-size: 0.9rem;
+			color: var(--font-color);
 			background-color: var(--primary-color);
 			text-align: center;
+			box-shadow: 2px 2px 5px black;
 			&:active {
-				color: black;
-				background-color: lightgray;
+				color: var(--primary-color);
+				background-color: var(--font-color);
 			}
 		`}
-		${({variant}) =>
-		variant === 'checkout' &&
-		css`
-			color: var(--accent-color);
-			background-color: lightgreen;
-		`}
-
-		${({variant}) =>
+	${({variant}) =>
 		variant === 'back' &&
 		css`
 		margin: 0.5rem;
 		padding: 0.25rem 0.5rem;
 		border-radius: 10px;
-		border: 1px solid black
-		font-size: 0.25rem;
-		color: white;
-		background-color: brown;
-
-			&:active {
-				color: black;
-				background-color: lightgray;
+		border: 1px solid black;
+		font-size: .9rem;
+		color: var(--font-color);
+		background-color: var(--secondary-color);
+		&:active {
+				color: var(--secondary-color);
+				background-color: var(--font-color);
 		`}
-		${({variant}) =>
+	${({variant}) =>
 		variant === 'counterHome' &&
 		css`
 			margin: 0;

@@ -32,7 +32,7 @@ export default function ProductCard({product}) {
 			<StyledProductPrice>{convert.format(product.price)}</StyledProductPrice>
 			<Link href={`/product/${product.id}`} aria-label="Info Button">
 				<a>
-					<SVG size="30px" color="burlywood" variant="info" />
+					<SVG size="30px" color="var(--accent-color)" variant="info" />
 				</a>
 			</Link>
 			<StyledButton

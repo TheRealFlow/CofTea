@@ -54,7 +54,7 @@ export default function OrderForm() {
 					clearCart();
 					router.push('/');
 				}}
-				variant="default"
+				variant="checkout"
 			>
 				Checkout
 			</StyledButton>

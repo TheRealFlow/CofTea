@@ -8,10 +8,10 @@ const StyledSpan = styled.span`
 			width: 90vw;
 			margin: 0.5rem;
 			padding: 0.75rem;
-			border: 2px solid burlywood;
+			border: 2px solid var(--accent-color);
 			border-radius: 10px;
 			font-size: 1.1rem;
-			letter-spacing: 0.1rem;
+			text-align: center;
 		`}
 	${({variant}) =>
 		variant === 'hidden' &&
@@ -23,24 +23,26 @@ const StyledSpan = styled.span`
 		css`
 			padding: 0.6rem;
 			font-weight: bold;
+			color: var(--font-color);
 		`}
 	${({variant}) =>
 		variant === 'badge-counter' &&
 		css`
 			display: inline-block;
 			margin: -1rem;
-			width: 20px;
-			line-height: 20px;
-			color: var(--accent-color);
-			background-color: var(--secondary-color);
+			height: 1.25rem;
+			width: 1.25rem;
+			font-size: 0.8rem;
+			color: var(--font-color);
+			background-color: var(--primary-color);
 			border-radius: 50%;
 			text-align: center;
-			border: 1px solid var(--accent-color);
+			border: 1px solid var(--font-color);
 		`}
 	${({variant}) =>
 		variant === 'comment-counter' &&
 		css`
-			letter-spacing: 0.1rem;
+			font-size: 0.8rem;
 			text-align: right;
 		`}
 	${({variant}) =>
@@ -48,27 +50,36 @@ const StyledSpan = styled.span`
 		css`
 			letter-spacing: 0.1rem;
 			color: var(--secondary-color);
-			font-size: 2rem;
+			font-size: 2.5rem;
 			font-weight: bold;
+			text-shadow: 3px 3px 5px black;
 		`}
 	${({variant}) =>
 		variant === 'tea' &&
 		css`
 			letter-spacing: 0.1rem;
 			color: var(--primary-color);
-			font-size: 2rem;
+			font-size: 2.5rem;
 			font-weight: bold;
+			text-shadow: 3px 3px 5px black;
 		`}
 	${({variant}) =>
 		variant === 'empty-cart' &&
 		css`
 			position: fixed;
-			top: 14rem;
-			margin: 0.5rem;
-			color: var(--accent-color);
-			font-size: 1.2rem;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 1rem;
 			font-weight: bold;
-			letter-spacing: 0.1rem;
+			text-align: center;
+		`}
+		${({variant}) =>
+		variant === 'select' &&
+		css`
+			margin-bottom: 1rem;
+			font-size: 1rem;
+			font-weight: bold;
 			text-align: center;
 		`}
 `;

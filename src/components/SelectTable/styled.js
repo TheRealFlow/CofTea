@@ -7,15 +7,16 @@ const StyledSelectTable = styled.div`
 	width: 90vw;
 	margin: 0.5rem;
 	padding: 0.75rem;
-	border: 2px solid burlywood;
+	border: 2px solid var(--accent-color);
 	border-radius: 10px;
-	letter-spacing: 0.1rem;
 	select {
 		width: 8rem;
 		height: 2rem;
 		margin-left: 0.5rem;
+		border: none;
 		border-radius: 10px;
-		background-color: burlywood;
+		background-color: var(--accent-color);
+		color: var(--font-color);
 		font-size: 0.9rem;
 		text-align: center;
 	}

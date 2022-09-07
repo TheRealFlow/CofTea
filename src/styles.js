@@ -1,19 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-/* abril-fatface-regular - latin */
-@font-face {
-  font-family: 'Abril Fatface';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/abril-fatface-v19-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/abril-fatface-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/abril-fatface-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/abril-fatface-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/abril-fatface-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/abril-fatface-v19-latin-regular.svg#AbrilFatface') format('svg'); /* Legacy iOS */
-}
+
 	*,
 	*::before,
 	*::after {
@@ -21,21 +9,21 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	html {
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		font-size: 16px;
 	}
 
 	body {
 		height: 100vh;
 		margin: 0;
-		background-attachment: fixed;
-		background-image: url('./../background-image.jpg');
+		background-color: #F5EBE0;
 		font-size: 1rem;
 	}
 	:root{
 		--primary-color: #63846A;
 		--secondary-color: #B56E4A;
-		--accent-color: #FFF2DE;
-		--background-color: #422519;
+		--font-color: #FFF2DE;
+		--accent-color: #262626;
 	}
 
 `;

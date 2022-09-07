@@ -5,7 +5,9 @@ import StyledSelectTable from './styled';
 export default function SelectTable() {
 	return (
 		<StyledSelectTable>
-			<StyledSpan>Please choose a Table. We will bring your drink to you</StyledSpan>
+			<StyledSpan variant="select">
+				Please choose a Table. We will bring your drink to you
+			</StyledSpan>
 			<StyledLabel>
 				Select your table
 				<select>

@@ -28,8 +28,8 @@ export default function CartItem({product}) {
 					layout="responsive"
 				/>
 			</ImageWrapper>
-			<StyledProductName>{product.name}</StyledProductName>
-			<StyledProductPrice>
+			<StyledProductName variant="cart-name">{product.name}</StyledProductName>
+			<StyledProductPrice variant="cart-price">
 				{convert.format(product.price * product.quantity)}
 			</StyledProductPrice>
 			<StyledProductQuantity>{product.quantity}</StyledProductQuantity>
@@ -40,7 +40,7 @@ export default function CartItem({product}) {
 					changeQuantity(product.id, -1);
 				}}
 			>
-				<SVG size="40px" color="red" variant="minusCounter" />
+				<SVG size="30px" color="var(--accent-color)" variant="minusCounter" />
 			</StyledButton>
 			<StyledButton
 				type="button"
@@ -49,7 +49,7 @@ export default function CartItem({product}) {
 					changeQuantity(product.id, 1);
 				}}
 			>
-				<SVG size="40px" color="green" variant="plusCounter" />
+				<SVG size="30px" color="var(--accent-color)" variant="plusCounter" />
 			</StyledButton>
 		</StyledCartItem>
 	);

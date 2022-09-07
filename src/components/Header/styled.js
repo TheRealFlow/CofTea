@@ -8,11 +8,12 @@ const StyledHeader = styled.header`
 	align-items: center;
 	justify-content: space-around;
 	width: 100vw;
-	padding: 0.75rem;
-	background-image: url('./../background-image.jpg');
+	background-color: var(--accent-color);
 	h1 {
-		color: var(--accent-color);
+		margin-right: 0.8rem;
+		color: var(--primary-color);
 		font-size: xx-large;
+		text-shadow: 2px 2px 2px black;
 	}
 `;
 

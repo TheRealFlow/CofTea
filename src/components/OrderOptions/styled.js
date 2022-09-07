@@ -6,10 +6,9 @@ const StyledOrderOptions = styled.div`
 	width: 90vw;
 	margin: 0.5rem;
 	padding: 0.75rem;
-	border: 2px solid burlywood;
+	border: 2px solid var(--accent-color);
 	border-radius: 10px;
 	font-size: 1.1rem;
-	letter-spacing: 0.1rem;
 `;
 
 export default StyledOrderOptions;

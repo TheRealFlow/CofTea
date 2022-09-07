@@ -18,7 +18,9 @@ export default function ShoppingCartPage() {
 				<OrderForm />
 			) : (
 				<StyledSpan variant="empty-cart">
-					Please put something in the Shopping Cart first
+					Your Shopping Cart is empty!
+					<br />
+					Please add something
 				</StyledSpan>
 			)}
 		</Layout>
