@@ -8,12 +8,13 @@ const StyledHeader = styled.header`
 	align-items: center;
 	justify-content: space-around;
 	width: 100vw;
+	height: 12vh;
 	background-color: var(--accent-color);
 	h1 {
 		margin-right: 0.8rem;
 		color: var(--primary-color);
 		font-size: xx-large;
-		text-shadow: 2px 2px 2px black;
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
 	}
 `;
 

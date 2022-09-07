@@ -48,20 +48,26 @@ const StyledSpan = styled.span`
 	${({variant}) =>
 		variant === 'cof' &&
 		css`
+			padding-left: 0.6rem;
 			letter-spacing: 0.1rem;
 			color: var(--secondary-color);
 			font-size: 2.5rem;
 			font-weight: bold;
-			text-shadow: 3px 3px 5px black;
+			text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+			background-color: var(--primary-color);
+			border-top-left-radius: 10px;
 		`}
 	${({variant}) =>
 		variant === 'tea' &&
 		css`
+			padding-right: 0.6rem;
 			letter-spacing: 0.1rem;
 			color: var(--primary-color);
 			font-size: 2.5rem;
 			font-weight: bold;
-			text-shadow: 3px 3px 5px black;
+			text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+			background-color: var(--secondary-color);
+			border-bottom-right-radius: 10px;
 		`}
 	${({variant}) =>
 		variant === 'empty-cart' &&

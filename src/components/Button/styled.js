@@ -42,6 +42,7 @@ const StyledButton = styled.button`
 			padding: 0.75rem 2.25rem;
 			border: none;
 			background-color: var(--primary-color);
+			box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 			&:active {
 				color: var(--primary-color);
 				background-color: var(--font-color);
