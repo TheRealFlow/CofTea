@@ -58,12 +58,13 @@ const StyledLink = styled.a`
 		variant === 'back' &&
 		css`
 		margin: 0.5rem;
-		padding: 0.25rem 0.5rem;
+		padding: 0.5rem 0.75rem;
 		border-radius: 10px;
-		border: 1px solid black;
+		border: none;
 		font-size: .9rem;
 		color: var(--font-color);
 		background-color: var(--secondary-color);
+		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
 		&:active {
 				color: var(--secondary-color);
 				background-color: var(--font-color);

@@ -11,7 +11,7 @@ const StyledButton = styled.button`
 		variant === 'default' &&
 		css`
 			grid-area: button;
-			border: 1px solid black;
+			border: none;
 			font-weight: 500;
 			box-shadow: 2px 2px 10px black;
 			&:active {
@@ -24,7 +24,7 @@ const StyledButton = styled.button`
 		css`
 			padding: 0.5rem 1.75rem;
 			margin: 1rem;
-			border: 1px solid black;
+			border: none;
 			font-size: 1rem;
 			font-weight: 500;
 			box-shadow: 2px 2px 10px black;
@@ -40,7 +40,7 @@ const StyledButton = styled.button`
 			font-weight: 500;
 			margin-top: 2.5rem;
 			padding: 0.75rem 2.25rem;
-			border: 1px solid black;
+			border: none;
 			background-color: var(--primary-color);
 			&:active {
 				color: var(--primary-color);

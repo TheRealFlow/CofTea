@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 	body {
 		height: 100vh;
 		margin: 0;
-		background-color: #F5EBE0;
+		background-color: #F7FBF5;
 		font-size: 1rem;
 	}
 	:root{
