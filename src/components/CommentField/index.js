@@ -1,5 +1,9 @@
 import {useState} from 'react';
 
+import StyledLabel from '../Label/styled';
+import StyledSpan from '../StyledSpan/styled';
+import StyledTextarea from '../Textarea/styled';
+
 import StyledCommentField from './styled';
 
 export default function CommentField() {
@@ -10,13 +14,13 @@ export default function CommentField() {
 	};
 	return (
 		<StyledCommentField>
-			<label>Any extra wishes?</label>
-			<textarea
+			<StyledLabel>Any extra wishes?</StyledLabel>
+			<StyledTextarea
 				maxLength={100}
 				placeholder={'Coffee with milk, Tea with sugar, ...'}
 				onChange={calculate}
 			/>
-			<span>{characterCount}/100</span>
+			<StyledSpan variant="comment-counter">{characterCount}/100</StyledSpan>
 		</StyledCommentField>
 	);
 }

@@ -5,6 +5,8 @@ import {useForm} from 'react-hook-form';
 import useStore from '../../hooks/useStore';
 import StyledButton from '../Button/styled';
 import CommentField from '../CommentField';
+import StyledInput from '../Input/styled';
+import StyledLabel from '../Label/styled';
 import StyledOrderOptions from '../OrderOptions/styled';
 import SelectTable from '../SelectTable';
 import StyledSpan from '../StyledSpan/styled';
@@ -29,16 +31,20 @@ export default function OrderForm() {
 	}
 	return (
 		<StyledOrderForm>
-			<StyledSpan variant={showFirstSpan ? '' : 'hidden'}>
+			<StyledSpan variant={showFirstSpan ? 'show' : 'hidden'}>
 				Your order-number will be displayed after checkout and called when your drink is
 				ready
 			</StyledSpan>
 			<CommentField />
 			<StyledOrderOptions>
-				<label htmlFor="here">
+				<StyledLabel htmlFor="here">
 					I want to drink here
-					<input type="checkbox" onClick={handleFirstSpan} {...register('selectHere')} />
-				</label>
+					<StyledInput
+						type="checkbox"
+						onClick={handleFirstSpan}
+						{...register('selectHere')}
+					/>
+				</StyledLabel>
 			</StyledOrderOptions>
 			{selectHere && <SelectTable />}
 			<StyledButton
@@ -48,7 +54,7 @@ export default function OrderForm() {
 					clearCart();
 					router.push('/');
 				}}
-				variant="default"
+				variant="checkout"
 			>
 				Checkout
 			</StyledButton>

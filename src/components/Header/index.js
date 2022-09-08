@@ -3,8 +3,9 @@ import {useRouter} from 'next/router';
 
 import SVG from '../../../public/SVG/svg';
 import useStore from '../../hooks/useStore';
-import StyledCartCounter from '../CartCounter/styled';
 import StyledLink from '../Link/styled';
+import StyledSpan from '../StyledSpan/styled';
+import TextWrapper from '../TextWrapper/styled';
 
 import StyledHeader from './styled';
 
@@ -23,7 +24,7 @@ export default function Header() {
 				<>
 					<Link href="/" aria-label="Home Page">
 						<a>
-							<SVG size="45px" color="burlywood" variant="home" />
+							<SVG size="45px" color="var(--secondary-color)" variant="home" />
 						</a>
 					</Link>
 
@@ -31,14 +32,14 @@ export default function Header() {
 				</>
 			) : (
 				<>
-					<h1>COFTEA</h1>
+					<TextWrapper>
+						<StyledSpan variant="coftea">COFTEA</StyledSpan>
+					</TextWrapper>
 
 					<Link href="/shoppingcart" aria-label="Shopping Cart">
 						<StyledLink variant="counterHome">
-							<SVG size="40px" color="burlywood" variant="cart" />
-							<StyledCartCounter variant="counterHome">
-								{totalQuantity}
-							</StyledCartCounter>
+							<SVG size="45px" color="var(--primary-color)" variant="cart" />
+							<StyledSpan variant="badge-counter">{totalQuantity}</StyledSpan>
 						</StyledLink>
 					</Link>
 				</>

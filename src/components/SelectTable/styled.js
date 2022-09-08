@@ -4,24 +4,19 @@ const StyledSelectTable = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 80vw;
+	width: 90vw;
 	margin: 0.5rem;
 	padding: 0.75rem;
-	border: 2px solid burlywood;
+	border: 1px solid var(--accent-color);
 	border-radius: 10px;
-	span {
-		margin-bottom: 1rem;
-		font-weight: bold;
-	}
-	label {
-		margin: 0 0.5rem;
-	}
 	select {
 		width: 8rem;
 		height: 2rem;
-		margin-left: 0.5rem;
+		margin-left: 1rem;
+		border: none;
 		border-radius: 10px;
-		background-color: burlywood;
+		background-color: var(--accent-color);
+		color: var(--font-color);
 		font-size: 0.9rem;
 		text-align: center;
 	}

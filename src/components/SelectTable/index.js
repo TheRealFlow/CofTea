@@ -1,10 +1,14 @@
-import StyledSelectTable from './styled';
+import StyledLabel from '../Label/styled';
+import StyledSpan from '../StyledSpan/styled';
 
+import StyledSelectTable from './styled';
 export default function SelectTable() {
 	return (
 		<StyledSelectTable>
-			<span>Please choose a Table. We will bring your drink to you</span>
-			<label>
+			<StyledSpan variant="select">
+				Please choose a Table. We will bring your drink to you
+			</StyledSpan>
+			<StyledLabel>
 				Select your table
 				<select>
 					<option>Select Table:</option>
@@ -19,7 +23,7 @@ export default function SelectTable() {
 					<option>Table 9</option>
 					<option>Table 10</option>
 				</select>
-			</label>
+			</StyledLabel>
 		</StyledSelectTable>
 	);
 }

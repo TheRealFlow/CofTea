@@ -4,75 +4,71 @@ const StyledLink = styled.a`
 	margin: 0.5rem;
 	padding: 0.4rem 1.3rem;
 	border-radius: 10px;
-	border: 1px solid black;
 	cursor: pointer;
 	${({variant}) =>
 		variant === 'all' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1.5rem;
-			font-size: 0.65rem;
-			border: 1px solid black;
-			color: var(--accent-color);
-			background-color: grey;
-
+			padding: 0.2rem 1rem;
+			width: 6.5rem;
+			font-size: 0.9rem;
+			color: var(--font-color);
+			background-color: var(--accent-color);
+			text-align: center;
+			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.15);
 			&:active {
-				color: black;
-				background-color: lightgray;
+				color: var(--accent-color);
+				background-color: var(--font-color);
 			}
 		`}
-
 	${({variant}) =>
 		variant === 'coffee' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1.5rem;
-			font-size: 0.65rem;
-			color: var(--accent-color);
-			background-color: var(--secondary-color);
-
+			padding: 0.2rem 1rem;
+			width: 6rem;
+			font-size: 0.9rem;
+			color: var(--font-color);
+			background-color: var(--accent-color);
+			text-align: center;
+			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.15);
 			&:active {
-				color: black;
-				background-color: lightgray;
+				color: var(--accent-color);
+				background-color: var(--font-color);
 		`}
-    
+
     ${({variant}) =>
 		variant === 'tea' &&
 		css`
 			margin: 0;
-			padding: 0.25rem 1.5rem;
-			font-size: 0.65rem;
-			color: var(--accent-color);
-			background-color: var(--primary-color);
-
+			padding: 0.2rem 1rem;
+			width: 6rem;
+			font-size: 0.9rem;
+			color: var(--font-color);
+			background-color: var(--accent-color);
+			text-align: center;
+			box-shadow: 0 1px 10px rgba(250, 250, 250, 0.15);
 			&:active {
-				color: black;
-				background-color: lightgray;
+				color: var(--accent-color);
+				background-color: var(--font-color);
 			}
 		`}
-		${({variant}) =>
-		variant === 'checkout' &&
-		css`
-			color: var(--accent-color);
-			background-color: lightgreen;
-		`}
-
-		${({variant}) =>
+	${({variant}) =>
 		variant === 'back' &&
 		css`
 		margin: 0.5rem;
-		padding: 0.25rem 0.5rem;
+		padding: 0.5rem 0.75rem;
 		border-radius: 10px;
-		border: 1px solid black
-		font-size: 0.25rem;
-		color: white;
-		background-color: brown;
-
-			&:active {
-				color: black;
-				background-color: lightgray;
+		border: none;
+		font-size: .9rem;
+		color: var(--font-color);
+		background-color: var(--accent-color);
+		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+		&:active {
+				color: var(--accent-color);
+				background-color: var(--font-color);
 		`}
-		${({variant}) =>
+	${({variant}) =>
 		variant === 'counterHome' &&
 		css`
 			margin: 0;
