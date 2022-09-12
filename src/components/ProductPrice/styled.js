@@ -17,6 +17,9 @@ const StyledProductPrice = styled.h3`
 			margin: auto;
 			font-size: 1.15rem;
 		`}
+	@media (min-width: 720px) {
+		font-size: 1.3rem;
+	}
 `;
 
 export default StyledProductPrice;

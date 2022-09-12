@@ -1,9 +1,9 @@
-import Header from './Header';
+import HeaderWrapper from '../components/HeaderWrapper';
 
 export default function Layout({children}) {
 	return (
 		<>
-			<Header />
+			<HeaderWrapper />
 			<main>{children}</main>
 		</>
 	);

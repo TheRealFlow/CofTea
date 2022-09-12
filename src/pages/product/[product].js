@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
@@ -14,6 +15,7 @@ export default function DetailsPage() {
 	const changeQuantity = useStore(state => state.changeQuantity);
 	const products = useStore(state => state.products);
 	const {query} = useRouter();
+	const router = useRouter();
 	const convert = Intl.NumberFormat('de-DE', {
 		style: 'currency',
 		currency: 'EUR',
@@ -21,6 +23,10 @@ export default function DetailsPage() {
 	});
 	return (
 		<StyledDetailPage>
+			<Head>
+				<title key="title">CofTea</title>
+				<meta key="description" name="description" content="This is our capstone-project" />
+			</Head>
 			{products
 				.filter(product => product.id === query.product)
 				.map(product => {
@@ -30,8 +36,9 @@ export default function DetailsPage() {
 								key={product.id}
 								alt={product.alt}
 								src={product.imgUrl}
-								width={400}
-								height={350}
+								width={900}
+								height={700}
+								layout="intrinsic"
 							/>
 							<StyledProductName variant="detail-name">
 								{product.name}
@@ -43,10 +50,12 @@ export default function DetailsPage() {
 								{convert.format(product.price)}
 							</StyledProductPrice>
 							<StyledButton
-								variant="detail"
+								type="submit"
 								onClick={() => {
 									changeQuantity(product.id, 1);
+									router.push('/');
 								}}
+								variant="detail"
 							>
 								Add to Cart
 							</StyledButton>
