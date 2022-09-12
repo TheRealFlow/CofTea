@@ -4,7 +4,7 @@ const StyledCartList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 8rem;
+	margin-top: 33.3%;
 	padding: 0;
 	animation: slide-in 500ms ease-out;
 	list-style: none;
@@ -15,6 +15,9 @@ const StyledCartList = styled.ul`
 		100% {
 			transform: translateY(0);
 		}
+	}
+	@media (min-width: 720px) {
+		margin-top: 20%;
 	}
 `;
 

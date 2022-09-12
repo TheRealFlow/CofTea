@@ -4,7 +4,7 @@ const StyledCartBanner = styled.div`
 	display: flex;
 	position: fixed;
 	z-index: 100;
-	top: 3.75rem;
+	top: 8%;
 	align-items: center;
 	justify-content: center;
 	width: 100vw;

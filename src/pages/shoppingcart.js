@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import CartBanner from '../components/CartBanner';
 import ShoppingCart from '../components/CartList';
 import Layout from '../components/Layout';
@@ -12,6 +14,10 @@ export default function ShoppingCartPage() {
 
 	return (
 		<Layout>
+			<Head>
+				<title key="title">Shopping Cart</title>
+				<meta key="description" name="description" content="This is our capstone-project" />
+			</Head>
 			<CartBanner />
 			<ShoppingCart shoppingCartItems={shoppingCartItems} />
 			{shoppingCartItems.length ? (

@@ -2,13 +2,10 @@ import styled from 'styled-components';
 
 const StyledHeader = styled.header`
 	display: flex;
-	position: fixed;
-	z-index: 100;
-	top: 0;
 	align-items: center;
 	justify-content: space-around;
 	width: 100vw;
-	height: 12vh;
+	height: 10vh;
 	background-color: var(--accent-color);
 	h1 {
 		margin-right: 0.8rem;

@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 const StyledProductList = styled.ul`
 	display: flex;
-	position: relative;
-	top: 7.5rem;
+	position: absolute;
+	top: 15%;
 	flex-direction: column;
 	align-items: center;
-	margin: 0;
+	width: 100%;
 	padding: 0;
 	animation: slide-in 650ms ease-out;
 	list-style: none;
@@ -17,6 +17,9 @@ const StyledProductList = styled.ul`
 		100% {
 			transform: translateY(0);
 		}
+	}
+	@media (min-width: 420px) {
+		margin-top: 0;
 	}
 `;
 

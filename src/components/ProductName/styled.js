@@ -8,6 +8,7 @@ const StyledProductName = styled.h2`
 	${({variant}) =>
 		variant === 'detail-name' &&
 		css`
+			margin-top: 1rem;
 			font-size: 1.75rem;
 			color: var(--accent-color);
 			border-bottom: 2px solid var(--accent-color);
@@ -18,6 +19,9 @@ const StyledProductName = styled.h2`
 			font-size: 1.3rem;
 			color: var(--accent-color);
 		`}
+	@media (min-width: 720px) {
+		font-size: 1.9rem;
+	}
 `;
 
 export default StyledProductName;

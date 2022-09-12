@@ -1,11 +1,11 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 import SVG from '../../../public/SVG/svg';
 import StyledButton from '../../components/Button/styled';
-import FilterBar from '../../components/FilterBar';
-import Header from '../../components/Header';
+import HeaderWrapper from '../../components/HeaderWrapper';
 import ImageWrapper from '../../components/ImageWrapper/styled';
 import StyledProductCard from '../../components/ProductCard/styled';
 import StyledProductList from '../../components/ProductList/styled';
@@ -24,8 +24,11 @@ export default function Category() {
 	});
 	return (
 		<>
-			<Header />
-			<FilterBar />
+			<Head>
+				<title key="title">CofTea</title>
+				<meta key="description" name="description" content="This is our capstone-project" />
+			</Head>
+			<HeaderWrapper />
 			<StyledProductList>
 				{products
 					.filter(product => product.category === query.category)
